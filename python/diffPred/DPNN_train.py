@@ -8,9 +8,11 @@ df = df.iloc[3270-2050:-1, 5:21:1]
 ndf = df.to_numpy(dtype=float)
 np.nan_to_num(ndf)
 ndif = np.diff(ndf, axis=0)
-ndif = (255*(ndif - np.min(ndif))/(np.max(ndif)-np.min(ndif)))
+minf = np.min(ndif)
+ranf = (np.max(ndif)-np.min(ndif))
+ndif = (255*(ndif - minf))/ranf
 imgD = ndif.astype(np.uint8)
-cv.imshow("denem",imgD)
+cv.imshow("denem", imgD)
 cv.waitKey()
 
 
