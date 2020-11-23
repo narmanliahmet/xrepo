@@ -1,7 +1,7 @@
 import pandas as pd
 from numpy import *
-from keras import *
-from keras.layers import *
+from tensorflow.keras import *
+from tensorflow.keras.layers import *
 
 df = pd.read_csv("bist-30.csv", delimiter=';')
 dfi = df.iloc[:-100, 1]
