@@ -1,2 +1,2 @@
 # xrepo
-Difference predictor for discrete signals repo.
+An humble repo for intiative projects
