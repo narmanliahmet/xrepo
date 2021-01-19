@@ -42,7 +42,7 @@ class MainWindow(QMainWindow):
         self.tedit = [QTextEdit("Name 1"), QTextEdit("Name 2"), QTextEdit("Name 3"), QTextEdit("Name 4")]
         for n in range(4):
             self.tedit[n].setStyleSheet("background-color: rgb(250,250,250);"
-                                        "border: 2px solid white;"
+                                        "border: 2px solid gray;"
                                         "border-radius: 7px;"
                                         "font: 20px;}")
 
@@ -112,17 +112,18 @@ class MainWindow(QMainWindow):
         self.stop.setParent(self)
 
         # Widget Connect
-        self.button[0].clicked.connect(utl.client1)
-        self.button[1].clicked.connect(utl.client2)
-        self.button[2].clicked.connect(utl.client3)
-        self.button[3].clicked.connect(utl.client4)
-        self.start.clicked.connect(utl.start)
-        self.stop.clicked.connect(utl.stop)
+        self.util = utl.Utillities()
+        self.button[1].clicked.connect(self.util.client2)
+        self.button[2].clicked.connect(self.util.client3)
+        self.button[3].clicked.connect(self.util.client4)
+        self.button[0].clicked.connect(self.util.client1)
+        self.start.clicked.connect(self.util.start)
+        self.stop.clicked.connect(self.util.stop)
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     w = MainWindow()
-    w.resize(700, 700)
+    w.setFixedSize(700, 700)
     w.show()
     sys.exit(app.exec_())

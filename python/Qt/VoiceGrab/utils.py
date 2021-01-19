@@ -4,36 +4,82 @@ import sounddevice as sd
 import matplotlib.pyplot as plt
 
 
-def client1(no):
-    print("Client 1")
+class Utillities:
+    def __init__(self, *args, **kwargs):
+        super(Utillities, self).__init__(*args, **kwargs)
+        self.out = np.empty(shape=4, dtype=np.ndarray)
+        self.fs = 48000
+        self.dur = 8
+        sd.default.samplerate = self.fs
+        sd.default.channels = 1
 
+    def client1(self):
+        try:
+            sd.default.device = 2, 4
+        except:
+            sd.default.device = 1, 3
+        print("Recording 1")
+        self.out[0] = sd.rec(int(self.dur * self.fs))
+        sd.wait()
+        print("Playing 1")
+        sd.play(self.out[0])
 
-def client2(no):
-    print("Client 2")
+    def client2(self):
+        try:
+            sd.default.device = 2, 4
+        except:
+            sd.default.device = 1, 3
+        self.out[1] = sd.rec(int(self.dur * self.fs))
+        sd.wait()
+        sd.play(self.out[1])
 
+    def client3(self):
+        try:
+            sd.default.device = 2, 4
+        except:
+            sd.default.device = 1, 3
+        self.out[2] = sd.rec(int(self.dur * self.fs))
+        sd.wait()
+        sd.play(self.out[2])
 
-def client3(no):
-    print("Client 3")
+    def client4(self):
+        try:
+            sd.default.device = 2, 4
+        except:
+            sd.default.device = 1, 3
+        self.out[3] = sd.rec(int(self.dur * self.fs))
+        sd.wait()
+        sd.play(self.out[3])
 
+    def text1(self):
+        print("Text 1")
 
-def client4(no):
-    print("Client 4")
+    def text2(self):
+        print("Text 2")
 
+    def text3(self):
+        print("Text 3")
 
-def text(no):
-    print("Text " + str(no))
+    def text4(self):
+        print("Text 4")
 
+    def start(self):
+        print("Start")
 
-def start():
-    print("Start")
+    def stop(self):
+        print("Stop")
 
+    def lamp1(self):
+        print("Lamp 1")
 
-def stop():
-    print("Stop")
+    def lamp2(self):
+        print("Lamp 1")
 
+    def lamp3(self):
+        print("Lamp 1")
 
-def lamp(no):
-    print("Lamp " + str(no))
+    def lamp4(self):
+        print("Lamp 1")
 
 
 def message():
