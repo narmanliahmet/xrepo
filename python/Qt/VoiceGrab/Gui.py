@@ -3,7 +3,6 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QTex
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 import utils as utl
-from functools import partial
 
 
 class MainWindow(QMainWindow):
