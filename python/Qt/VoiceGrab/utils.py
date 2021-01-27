@@ -1,8 +1,9 @@
 import numpy as np
 import sounddevice as sd
-import asyncio
+import time as tm
 from PyQt5.QtTest import QTest
-from PyQt5.QtCore import QThread, pyqtSignal
+from PyQt5.QtCore import QThread, pyqtSignal, pyqtSlot, QObject
+from PyQt5.QtWidgets import QMessageBox, QPushButton
 
 
 class Utillities:
@@ -27,6 +28,7 @@ class Utillities:
         print("Recording 1")
         self.out[0] = sd.rec(int(self.N))
         sd.wait()
+        print(self.out[0])
         self.fout[0] = np.fft.fft(self.out[0][:, 0])
         self.fout[0] = np.abs(np.concatenate([self.fout[0][self.N // 2:], self.fout[0][0:self.N // 2]]))
 
@@ -77,11 +79,12 @@ class Utillities:
 
     def start(self):
         self.ap.flag = True
-        self.ap.streamAudio(self.buffer)
+        print("Here")
+        self.ap.thread.start()
 
     def stop(self):
         print("Stop")
-        self.ap.flag = False
+        self.ap.worker.flag = False
 
     def lamp1(self):
         print("Lamp 1")
@@ -101,31 +104,41 @@ def message():
 
 
 class AudioProcess:
+    # An object containing methods you want to run in a thread
+    class Worker(QObject):
+        def __init__(self, *args, **kwargs):
+            super(QObject, self).__init__(*args, **kwargs)
+            self.fs = 48000
+            self.dur = 1
+            self.N = self.fs * self.dur
+            self.flag = True
+            self.buffer = np.ndarray
+            sd.default.samplerate = self.fs
+            sd.default.channels = 1
+
+        @pyqtSlot()
+        def streamAudio(self):
+
+            print("Stream Started")
+            try:
+                sd.default.device = 2, 4
+            except:
+                sd.default.device = 1, 3
+            while self.flag:
+                self.buffer = sd.rec(int(self.N))
+                sd.wait()
+                print(self.buffer)
+            print("Stream Finished")
 
     def __init__(self, *args, **kwargs):
         super(AudioProcess, self).__init__(*args, **kwargs)
-        self.fs = 48000
-        self.dur = 1
-        self.N = self.fs * self.dur
-        self.flag = True
-        sd.default.samplerate = self.fs
-        sd.default.channels = 1
+        self.thread = QThread()
+        self.worker = AudioProcess.Worker()
+        self.worker.moveToThread(self.thread)
+        self.thread.started.connect(self.worker.streamAudio)
 
     def corr(self, x, y):
         return np.corrcoef(x, y)
-
-    def streamAudio(self, buffer):
-        print("Stream Started")
-        try:
-            sd.default.device = 2, 4
-        except:
-            sd.default.device = 1, 3
-        while self.flag:
-            buffer = sd.rec(int(self.N))
-            QTest.qWait(1000)
-            print(buffer)
-        print("Stream Finished")
-        print(buffer)
 
     def grabClient(self, audio):
         pass
