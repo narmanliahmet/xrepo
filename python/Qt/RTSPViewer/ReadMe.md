@@ -13,6 +13,13 @@
 - Use snap button to take a snap shot.
 - Use volume slider to adjust volume over stream
 
-Bugs to be fixed.
+## Features
+- RTSP stream over given rtsp link
+- Stream control over slider and play/pause button
+- Volume control of stream
+- Stream snap shot take with button
+- Fancy slider design
+
+## Bugs to be fixed.
 - Slider movement over play mode gives a delay to play again.
 - Sometimes slider move over play mode make stream pause.
