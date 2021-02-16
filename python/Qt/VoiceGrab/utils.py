@@ -4,6 +4,7 @@ import time as tm
 from PyQt5.QtTest import QTest
 from PyQt5.QtCore import QThread, pyqtSignal, pyqtSlot, QObject, QTimer
 from PyQt5.QtWidgets import QMessageBox, QPushButton
+import functools as ft
 
 
 class Utillities:
@@ -11,15 +12,17 @@ class Utillities:
     def __init__(self, *args, **kwargs):
         super(Utillities, self).__init__(*args, **kwargs)
         self.buffer = np.ndarray
-        self.ap = AudioProcess()
         self.out = np.empty(shape=4, dtype=np.ndarray)
         self.fout = np.empty(shape=4, dtype=np.ndarray)
         self.fs = 48000
-        self.dur = 1
+        self.dur = 8
         self.N = self.fs * self.dur
+        self.flag = False
         sd.default.samplerate = self.fs
         sd.default.channels = 1
+        self.recFlag = [False] * 4
 
+        self.buffer = np.ndarray
         self.timerq1 = QTimer()
         self.timerq2 = QTimer()
         self.timerq3 = QTimer()
@@ -34,6 +37,10 @@ class Utillities:
         self.timerq3.setSingleShot(True)
         self.timerq4.setSingleShot(True)
 
+        self.timer = QTimer()
+        self.timer.setInterval(8000)
+        self.timer.timeout.connect(self.streamAudio)
+
     def clientact1(self):
 
         print("Recording 1")
@@ -41,9 +48,9 @@ class Utillities:
         sd.wait()
         print(self.out[0])
         self.fout[0] = np.fft.fft(self.out[0][:, 0])
-        self.fout[0] = np.abs(np.concatenate([self.fout[0][self.N // 2:], self.fout[0][0:self.N // 2]]))
         print("End of Recording 1")
-        self.ap.flag = False
+        self.flag = False
+        self.recFlag[0] = True
 
     def clientact2(self):
 
@@ -52,9 +59,9 @@ class Utillities:
         sd.wait()
         print(self.out[1])
         self.fout[1] = np.fft.fft(self.out[1][:, 0])
-        self.fout[1] = np.abs(np.concatenate([self.fout[1][self.N // 2:], self.fout[1][0:self.N // 2]]))
-        self.ap.flag = False
         print("End of Recording 2")
+        self.flag = False
+        self.recFlag[1] = True
 
     def clientact3(self):
 
@@ -63,9 +70,9 @@ class Utillities:
         sd.wait()
         print(self.out[2])
         self.fout[2] = np.fft.fft(self.out[2][:, 0])
-        self.fout[2] = np.abs(np.concatenate([self.fout[2][self.N // 2:], self.fout[2][0:self.N // 2]]))
-        self.ap.flag = False
         print("End of Recording 3")
+        self.flag = False
+        self.recFlag[2] = True
 
     def clientact4(self):
 
@@ -74,32 +81,32 @@ class Utillities:
         sd.wait()
         print(self.out[3])
         self.fout[3] = np.fft.fft(self.out[3][:, 0])
-        self.fout[3] = np.abs(np.concatenate([self.fout[3][self.N // 2:], self.fout[3][0:self.N // 2]]))
-        self.ap.flag = False
         print("End of Recording 4")
+        self.flag = False
+        self.recFlag[3] = True
 
     def client1(self):
-        if self.ap.flag:
+        if self.flag:
             return
-        self.ap.flag = True
+        self.flag = True
         self.timerq1.start(50)
 
     def client2(self):
-        if self.ap.flag:
+        if self.flag:
             return
-        self.ap.flag = True
+        self.flag = True
         self.timerq2.start(50)
 
     def client3(self):
-        if self.ap.flag:
+        if self.flag:
             return
-        self.ap.flag = True
+        self.flag = True
         self.timerq3.start(50)
 
     def client4(self):
-        if self.ap.flag:
+        if self.flag:
             return
-        self.ap.flag = True
+        self.flag = True
         self.timerq4.start(50)
 
     def text1(self):
@@ -115,16 +122,16 @@ class Utillities:
         print("Text 4")
 
     def start(self):
-        if self.ap.flag:
+        if self.flag:
             return
-        self.ap.flag = True
+        self.flag = True
         print("Stream Started")
-        self.ap.timer.start()
+        self.timer.start()
 
     def stop(self):
         print("Stop")
-        self.ap.flag = False
-        self.ap.timer.stop()
+        self.flag = False
+        self.timer.stop()
 
     def lamp1(self):
         print("Lamp 1")
@@ -141,25 +148,6 @@ class Utillities:
     def message(self):
         print("Message")
 
-
-class AudioProcess:
-    def __init__(self, *args, **kwargs):
-        super(AudioProcess, self).__init__(*args, **kwargs)
-
-        self.fs = 48000
-        self.dur = 1
-        self.N = self.fs * self.dur
-        self.flag = False
-        self.buffer = np.ndarray
-        sd.default.samplerate = self.fs
-        sd.default.channels = 1
-        self.timer = QTimer()
-        self.timer.setInterval(1100)
-        self.timer.timeout.connect(self.streamAudio)
-
-    def corr(self, x, y):
-        return np.corrcoef(x, y)
-
     def grabClient(self, audio):
         pass
 
@@ -167,11 +155,24 @@ class AudioProcess:
         pass
 
     def streamAudio(self):
-        # try:
-        #     sd.default.device = 2, 4
-        # except:
-        #     sd.default.device = 1, 3
         if self.flag:
             self.buffer = sd.rec(int(self.N))
             sd.wait()
-            print(self.buffer)
+            if self.recFlag[0]:
+                print(np.fft.fft(self.buffer))
+                print(self.fout[0])
+                corr1 = np.corrcoef(np.transpose(np.abs(np.fft.fft(self.buffer))), np.abs(self.fout[0]))
+                print("Correlation of user 1")
+                print(corr1[0, 1])
+            if self.recFlag[1]:
+                corr2 = np.corrcoef(np.fft.fft(self.buffer), self.fout[1])
+                print("Correlation of user 2")
+                print(corr2[0, 1])
+            if self.recFlag[2]:
+                corr3 = np.corrcoef(np.fft.fft(self.buffer), self.fout[2])
+                print("Correlation of user 3")
+                print(corr3[0, 1])
+            if self.recFlag[3]:
+                corr4 = np.corrcoef(np.fft.fft(self.buffer), self.fout[3])
+                print("Correlation of user 4")
+                print(corr4[0, 1])
