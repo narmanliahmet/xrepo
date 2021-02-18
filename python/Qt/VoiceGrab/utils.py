@@ -15,9 +15,15 @@ class Utillities:
         self.out = np.empty(shape=4, dtype=np.ndarray)
         self.fout = np.empty(shape=4, dtype=np.ndarray)
         self.fs = 48000
-        self.dur = 8
+        self.dur = 20
+        self.dur2 = 1
         self.N = self.fs * self.dur
+        self.N2 = self.fs * self.dur2
         self.flag = False
+        self.corr1 = []
+        self.corr2 = []
+        self.corr3 = []
+        self.corr4 = []
         sd.default.samplerate = self.fs
         sd.default.channels = 1
         self.recFlag = [False] * 4
@@ -38,7 +44,7 @@ class Utillities:
         self.timerq4.setSingleShot(True)
 
         self.timer = QTimer()
-        self.timer.setInterval(8000)
+        self.timer.setInterval(1000)
         self.timer.timeout.connect(self.streamAudio)
 
     def clientact1(self):
@@ -48,6 +54,7 @@ class Utillities:
         sd.wait()
         print(self.out[0])
         self.fout[0] = np.fft.fft(self.out[0][:, 0])
+        self.fout[0] = self.fout[0][::20]
         print("End of Recording 1")
         self.flag = False
         self.recFlag[0] = True
@@ -59,6 +66,7 @@ class Utillities:
         sd.wait()
         print(self.out[1])
         self.fout[1] = np.fft.fft(self.out[1][:, 0])
+        self.fout[1] = self.fout[1][::20]
         print("End of Recording 2")
         self.flag = False
         self.recFlag[1] = True
@@ -70,6 +78,7 @@ class Utillities:
         sd.wait()
         print(self.out[2])
         self.fout[2] = np.fft.fft(self.out[2][:, 0])
+        self.fout[2] = self.fout[2][::20]
         print("End of Recording 3")
         self.flag = False
         self.recFlag[2] = True
@@ -81,6 +90,7 @@ class Utillities:
         sd.wait()
         print(self.out[3])
         self.fout[3] = np.fft.fft(self.out[3][:, 0])
+        self.fout[3] = self.fout[3][::20]
         print("End of Recording 4")
         self.flag = False
         self.recFlag[3] = True
@@ -156,23 +166,23 @@ class Utillities:
 
     def streamAudio(self):
         if self.flag:
-            self.buffer = sd.rec(int(self.N))
+            self.buffer = sd.rec(int(self.N2))
             sd.wait()
             if self.recFlag[0]:
                 print(np.fft.fft(self.buffer))
                 print(self.fout[0])
-                corr1 = np.corrcoef(np.transpose(np.abs(np.fft.fft(self.buffer))), np.abs(self.fout[0]))
+                self.corr1 = np.corrcoef(np.transpose(np.abs(np.fft.fft(self.buffer))), np.abs(self.fout[0]))
                 print("Correlation of user 1")
-                print(corr1[0, 1])
+                print(self.corr1[0, 1])
             if self.recFlag[1]:
-                corr2 = np.corrcoef(np.fft.fft(self.buffer), self.fout[1])
+                self.corr2 = np.corrcoef(np.transpose(np.abs(np.fft.fft(self.buffer))), np.abs(self.fout[1]))
                 print("Correlation of user 2")
-                print(corr2[0, 1])
+                print(self.corr2[0, 1])
             if self.recFlag[2]:
-                corr3 = np.corrcoef(np.fft.fft(self.buffer), self.fout[2])
+                self.corr3 = np.corrcoef(np.transpose(np.abs(np.fft.fft(self.buffer))), np.abs(self.fout[2]))
                 print("Correlation of user 3")
-                print(corr3[0, 1])
+                print(self.corr3[0, 1])
             if self.recFlag[3]:
-                corr4 = np.corrcoef(np.fft.fft(self.buffer), self.fout[3])
+                self.corr4 = np.corrcoef(np.transpose(np.abs(np.fft.fft(self.buffer))), np.abs(self.fout[3]))
                 print("Correlation of user 4")
-                print(corr4[0, 1])
+                print(self.corr4[0, 1])
