@@ -3,6 +3,8 @@ from PyQt5.QtWidgets import QApplication, QMainWindow, QLabel, QPushButton, QTex
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 import utils as utl
+import numpy as np
+from itertools import compress as cp
 
 
 class MainWindow(QMainWindow):
@@ -13,6 +15,11 @@ class MainWindow(QMainWindow):
         # Main Style
         self.setWindowTitle("VoiceGrab-0.01")
         self.setStyleSheet("background-color: rgb(200,200,200)")
+
+        # Timers
+        self.timer = QTimer()
+        self.timer.setInterval(1000)
+        self.timer.timeout.connect(self.updateLampTimer)
 
         # Widget Initialization
 
@@ -117,7 +124,36 @@ class MainWindow(QMainWindow):
         self.button[3].clicked.connect(self.util.client4)
         self.button[0].clicked.connect(self.util.client1)
         self.start.clicked.connect(self.util.start)
+        self.start.clicked.connect(self.updateLamp)
+        self.stop.clicked.connect(self.stopLamp)
         self.stop.clicked.connect(self.util.stop)
+
+    def updateLamp(self):
+        self.timer.start()
+
+    def updateLampTimer(self):
+        print("Timer got")
+        cor = np.array([self.util.corr1[0, 1], self.util.corr2[0, 1], self.util.corr3[0, 1], self.util.corr4[0, 1]])
+        corn = [True] * 4
+        corp = [False] * 4
+        corn[int(np.where(np.abs(cor) == np.max(np.abs(cor)))[0])] = False
+        corp[int(np.where(np.abs(cor) == np.max(np.abs(cor)))[0])] = True
+        list(cp(self.lamp, corp))[0].setStyleSheet("background-color: rgb(200,150,20);"
+                                                   "color: white;"
+                                                   "border: 4px solid white;"
+                                                   "border-radius: 25px;"
+                                                   "font: 30px;"
+                                                   )
+        for n in range(3):
+            list(cp(self.lamp, corn))[n].setStyleSheet("background-color: rgb(100,100,100);"
+                                                       "color: white;"
+                                                       "border: 4px solid white;"
+                                                       "border-radius: 25px;"
+                                                       "font: 30px;"
+                                                       )
+
+    def stopLamp(self):
+        self.timer.stop()
 
 
 if __name__ == "__main__":

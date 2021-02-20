@@ -5,7 +5,7 @@ from PyQt5.QtTest import QTest
 from PyQt5.QtCore import QThread, pyqtSignal, pyqtSlot, QObject, QTimer
 from PyQt5.QtWidgets import QMessageBox, QPushButton
 import functools as ft
-
+import matplotlib.pyplot as plt
 
 class Utillities:
 
@@ -15,7 +15,7 @@ class Utillities:
         self.out = np.empty(shape=4, dtype=np.ndarray)
         self.fout = np.empty(shape=4, dtype=np.ndarray)
         self.fs = 48000
-        self.dur = 20
+        self.dur = 4
         self.dur2 = 1
         self.N = self.fs * self.dur
         self.N2 = self.fs * self.dur2
@@ -54,7 +54,7 @@ class Utillities:
         sd.wait()
         print(self.out[0])
         self.fout[0] = np.fft.fft(self.out[0][:, 0])
-        self.fout[0] = self.fout[0][::20]
+        self.fout[0] = self.fout[0][::4]
         print("End of Recording 1")
         self.flag = False
         self.recFlag[0] = True
@@ -66,7 +66,7 @@ class Utillities:
         sd.wait()
         print(self.out[1])
         self.fout[1] = np.fft.fft(self.out[1][:, 0])
-        self.fout[1] = self.fout[1][::20]
+        self.fout[1] = self.fout[1][::4]
         print("End of Recording 2")
         self.flag = False
         self.recFlag[1] = True
@@ -78,7 +78,7 @@ class Utillities:
         sd.wait()
         print(self.out[2])
         self.fout[2] = np.fft.fft(self.out[2][:, 0])
-        self.fout[2] = self.fout[2][::20]
+        self.fout[2] = self.fout[2][::4]
         print("End of Recording 3")
         self.flag = False
         self.recFlag[2] = True
@@ -90,7 +90,7 @@ class Utillities:
         sd.wait()
         print(self.out[3])
         self.fout[3] = np.fft.fft(self.out[3][:, 0])
-        self.fout[3] = self.fout[3][::20]
+        self.fout[3] = self.fout[3][::4]
         print("End of Recording 4")
         self.flag = False
         self.recFlag[3] = True
