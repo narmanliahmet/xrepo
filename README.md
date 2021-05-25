@@ -1,2 +1,2 @@
 # xrepo
-An humble repo for intiative projects
+A humble repo for intiative projects
