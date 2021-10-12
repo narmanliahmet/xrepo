@@ -14,6 +14,76 @@ MainWindow::MainWindow(QWidget *parent)
     // Configure popup
     pop->setFixedSize(1000,700);
     pop->move((1920-1000)/2, (1080-700)/2-100);
+    QPushButton *confirm = new QPushButton(pop);
+    confirm->setText("Hesapla");
+    confirm->setStyleSheet("QPushButton{font-size: 30px; color: rgb(0,0,0); background-color: rgb(200,50,0);border: 5px solid green; border-radius: 50px; border-style: inset;} QPushButton::hover{background-color: rgb(255,255,255);} QPushButton::pressed{background-color: rgb(0,0,0);}");
+    confirm->resize(200, 100);
+    confirm->move(750, 550);
+
+    QSpinBox *coffee1 = new QSpinBox(pop);
+    coffee1->setRange(0,20);
+    coffee1->setSingleStep(1);
+    coffee1->setValue(0);
+    coffee1->resize(200, 50);
+    coffee1->move(10, 50);
+    coffee1->setStyleSheet("background-color: rgb(100,200,0);");
+
+    QSpinBox *coffee2 = new QSpinBox(pop);
+    coffee2->setRange(0,20);
+    coffee2->setSingleStep(1);
+    coffee2->setValue(0);
+    coffee2->resize(200, 50);
+    coffee2->move(10, 150);
+    coffee2->setStyleSheet("background-color: rgb(100,200,0);");
+
+    QSpinBox *coffee3 = new QSpinBox(pop);
+    coffee3->setRange(0,20);
+    coffee3->setSingleStep(1);
+    coffee3->setValue(0);
+    coffee3->resize(200, 50);
+    coffee3->move(10, 250);
+    coffee3->setStyleSheet("background-color: rgb(100,200,0);");
+
+    QSpinBox *coffee4 = new QSpinBox(pop);
+    coffee4->setRange(0,20);
+    coffee4->setSingleStep(1);
+    coffee4->setValue(0);
+    coffee4->resize(200, 50);
+    coffee4->move(10, 350);
+    coffee4->setStyleSheet("background-color: rgb(100,200,0);");
+
+    QSpinBox *coffee5 = new QSpinBox(pop);
+    coffee5->setRange(0,20);
+    coffee5->setSingleStep(1);
+    coffee5->setValue(0);
+    coffee5->resize(200, 50);
+    coffee5->move(260, 50);
+    coffee5->setStyleSheet("background-color: rgb(100,200,0);");
+
+    QSpinBox *coffee6 = new QSpinBox(pop);
+    coffee6->setRange(0,20);
+    coffee6->setSingleStep(1);
+    coffee6->setValue(0);
+    coffee6->resize(200, 50);
+    coffee6->move(260, 150);
+    coffee6->setStyleSheet("background-color: rgb(100,200,0);");
+
+    QSpinBox *coffee7 = new QSpinBox(pop);
+    coffee7->setRange(0,20);
+    coffee7->setSingleStep(1);
+    coffee7->setValue(0);
+    coffee7->resize(200, 50);
+    coffee7->move(260, 250);
+    coffee7->setStyleSheet("background-color: rgb(100,200,0);");
+
+    QSpinBox *coffee8 = new QSpinBox(pop);
+    coffee8->setRange(0,20);
+    coffee8->setSingleStep(1);
+    coffee8->setValue(0);
+    coffee8->resize(200, 50);
+    coffee8->move(260, 350);
+    coffee8->setStyleSheet("background-color: rgb(100,200,0);");
+
     // Configure
 
     /// Header
@@ -104,6 +174,8 @@ MainWindow::~MainWindow()
     delete ui;
     delete header;
     delete tables;
+    delete pop;
+    delete back;
 }
 
 void MainWindow::handleButton(int ind, QString name)

@@ -8,6 +8,7 @@
 #include <QMessageBox>
 #include <QList>
 #include <QMap>
+#include <QSpinBox>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -30,6 +31,7 @@ private:
     QMainWindow *pop;
     QMap<int, QMap<QString, bool>> menu;
     QHash<QString, bool> pays;
+    QMap<QString, QSpinBox*> *clist;
 
 };
 #endif // MAINWINDOW_H
