@@ -1,0 +1,1013 @@
+
+
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8" />
+    
+    
+
+    <script type="text/javascript">
+    !function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
+    src: "https://js.monitor.azure.com/scripts/b/ai.2.min.js", crossOrigin: "anonymous",
+        cfg: {
+            instrumentationKey: "15ba35f3-63c1-4d60-a90e-373f0da681d6",
+            disableFetchTracking: false
+        }
+    });
+    </script>
+
+    <script>
+        window.chrGlobal = {"language":"en","analytics_env":"christiesprod","analytics_region_tag":"data-track","analytics_debug":false,"is_authenticated":false,"analytics_datalayer":true,"share":{"client_id":"ra-5fc8ecd336145103","items":[{"type":"facebook","label_txt":"Facebook","analytics_id":"live_socialshare_facebook","aria_share_title_txt":"Share via $name"},{"type":"pinterest","label_txt":"Pinterest","analytics_id":"live_socialshare_pinterest","aria_share_title_txt":"Share via $name"},{"type":"twitter","label_txt":"Twitter","analytics_id":"live_socialshare_twitter","aria_share_title_txt":"Share via $name"},{"type":"wechat","label_txt":"Wechat","analytics_id":"live_socialshare_wechat","aria_share_title_txt":"Share via $name"},{"type":"email","label_txt":"Email","analytics_id":"live_socialshare_email","aria_share_title_txt":"Share via Email"}]},"labels":{"close_modal_txt":"Close modal window"},"ismobileapp":false,"access_token_expiration":"0"};
+    </script>
+
+
+
+    <title>ROLEX. A STAINLESS STEEL AUTOMATIC WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX
+</title>
+
+    <meta name="description" content="SIGNED ROLEX, SUBMARINER MODEL, REF. 126610LV, CIRCA 2020
+" />
+
+    <meta name="keywords" content="Christie’s, Live Auction, Auction" />
+
+    <link rel="canonical" href="https://www.christies.com/en/lot/lot-6338411" />
+
+    <meta name="robots" content="all" />
+
+
+
+    <meta name="og:title" content="ROLEX. A STAINLESS STEEL AUTOMATIC WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX
+" />
+
+    <meta name="og:description" content="SIGNED ROLEX, SUBMARINER MODEL, REF. 126610LV, CIRCA 2020
+" />
+
+    <meta name="og:image" content="https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?mode=max" />
+
+    <meta name="og:type" content="website" />
+
+    <meta name="og:url" content="https://www.christies.com/lot/lot-6338411?ldp_breadcrumb=back&amp;intObjectID=6338411&amp;from=salessummary&amp;lid=1" />
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no">
+
+    <style>.chr-img{display:block;position:absolute;top:0;left:0;width:100%;height:100%;font-family:"object-fit: cover";object-fit:cover;image-rendering:-webkit-optimize-contrast}.chr-img--bg{position:relative;background-size:cover;background-position:50%}.chr-img__fallback{object-fit:contain;font-family:"object-fit: contain"}.chr-img__content{position:absolute;left:0;top:0;width:100%;height:100%}.chr-img__wrapper{display:block;position:relative;width:100%;height:0;overflow:hidden}.chr-img__wrapper--natural-height{height:auto}.chr-img__wrapper--natural-height .chr-img{position:initial;object-fit:contain;width:auto;height:auto}@media(-ms-high-contrast){.high-contrast .chr-img__wrapper .chr-img{visibility:visible !important}.high-contrast .chr-img__wrapper picture{visibility:visible !important;position:static !important}.high-contrast .chr-img__wrapper .chr-img.lazysizes-display-clone{display:none}}
+</style>
+    <link href="/Assets/Discovery.Project.Website/V2020/design-library/atlas.css?hash=34a2704cc49fb54d4692c11be42e49d2" rel="stylesheet" />
+    <link href="/Assets/Discovery.Project.Website/V2020/design-library/bembo.css?hash=c4477cc207418d9bbbb24c38964c60da" rel="stylesheet" />
+    <script src="/Assets/Discovery.Project.Website/V2020/design-library/critical.js?hash=6e5ff18644f60d54eff5e3208b575f4e"></script>
+    <script type="module" src="/Assets/Discovery.Project.Website/V2020/design-library/christies-design-system-library.esm.js?hash=9e127e8a87e33ebff4f56b5a3926b20f"></script>
+    <script nomodule src="/Assets/Discovery.Project.Website/V2020/design-library/christies-design-system-library.js?hash=44ad10155bce07f1af68efa72aabc834"></script>
+    <link rel="stylesheet" href="/Assets/Discovery.Project.Website/V2020/design-library/christies-design-system-library.css?hash=505904a0879da0d99ea431ff0125a8ec" />
+
+<script>
+    function getRootNode(o) { return "object" == typeof o && Boolean(o.composed) ? getShadowIncludingRoot(this) : getRoot(this) } function getShadowIncludingRoot(o) { var t = getRoot(o); return isShadowRoot(t) ? getShadowIncludingRoot(t.host) : t } function getRoot(o) { return null != o.parentNode ? getRoot(o.parentNode) : o }
+    function isShadowRoot(o) { return "#document-fragment" === o.nodeName && "ShadowRoot" === o.constructor.name } Object.defineProperty(Node.prototype, "getRootNode", { enumerable: !1, configurable: !1, value: getRootNode });
+</script>
+<link rel='shortcut icon' type='image/x-icon' href='/Assets/Discovery.Project.Website/V2019/favicons/favicon.ico'><link rel='icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/favicon-16x16.png' sizes='16x16'><link rel='icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/favicon-32x32.png' sizes='32x32'><link rel='apple-touch-icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-icon-57x57.png' sizes='57x57'><link rel='apple-touch-icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-icon-60x60.png' sizes='60x60'><link rel='apple-touch-icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-icon-72x72.png' sizes='72x72'><link rel='apple-touch-icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-icon-76x76.png' sizes='76x76'><link rel='apple-touch-icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-icon-114x114.png' sizes='114x114'><link rel='apple-touch-icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-icon-120x120.png' sizes='120x120'><link rel='apple-touch-icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-icon-144x144.png' sizes='144x144'><link rel='apple-touch-icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-icon-152x152.png' sizes='152x152'><link rel='apple-touch-icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-icon-167x167.png' sizes='167x167'><link rel='apple-touch-icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-icon-180x180.png' sizes='180x180'><link rel='apple-touch-icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-icon-1024x1024.png' sizes='1024x1024'><link rel='apple-touch-startup-image' media='(min-width: 320px) and (min-height: 480px) and (-webkit-device-pixel-ratio: 1)' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-startup-image-320x460.png'><link rel='apple-touch-startup-image' media='(min-width: 320px) and (min-height: 480px) and (-webkit-device-pixel-ratio: 2)' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-startup-image-640x920.png'><link rel='apple-touch-startup-image' media='(min-width: 320px) and (min-height: 568px) and (-webkit-device-pixel-ratio: 2)' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-startup-image-640x1096.png'><link rel='apple-touch-startup-image' media='(min-width: 375px) and (min-height: 667px) and (-webkit-device-pixel-ratio: 2)' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-startup-image-750x1294.png'><link rel='apple-touch-startup-image' media='(min-width: 414px) and (min-height: 736px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3)' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-startup-image-1182x2208.png'><link rel='apple-touch-startup-image' media='(min-width: 414px) and (min-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-startup-image-1242x2148.png'><link rel='apple-touch-startup-image' media='(min-width: 414px) and (min-height: 736px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3)' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-startup-image-748x1024.png'><link rel='apple-touch-startup-image' media='(min-width: 768px) and (min-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1)' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-startup-image-768x1004.png'><link rel='apple-touch-startup-image' media='(min-width: 768px) and (min-height: 1024px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-startup-image-1496x2048.png'><link rel='apple-touch-startup-image' media='(min-width: 768px) and (min-height: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/apple-touch-startup-image-1536x2008.png'><link rel='icon' type='image/png' href='/Assets/Discovery.Project.Website/V2019/favicons/coast-228x228.png'>
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="theme-color" content="#fff">
+        <meta name="application-name" content="Christie&#39;s">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="apple-mobile-web-app-title" content="Christie&#39;s">
+        <meta name="msapplication-TileColor" content="#fff">
+        <meta name="msapplication-TileImage" content="/Assets/Discovery.Project.Website/mstile-144x144.png">
+        <meta name="msapplication-config" content="\Assets\Discovery.Project.Website\favicons\browserconfig.xml">
+        <meta name="yandex-tableau-widget" content="\Assets\Discovery.Project.Website\favicons\yandex-browser-manifest.json">
+
+    <script>
+    var $buoop = {
+        required: { e: -4, f: -3, o: -3, s: -1, c: -3 }, insecure: true, unsupported: true, api: 2020.02, text: {
+            'msg': 'Your web browser ({brow_name}) is out of date.',
+            'msgmore': 'Update your browser for more security, speed and the best experience on this site.',
+            'bupdate': 'Update browser',
+            'bignore': 'Ignore',
+            'remind': 'You will be reminded in {days} days.',
+            'bnever': 'Never show again'
+        }
+    };
+    function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+    };
+    try { document.addEventListener("DOMContentLoaded", $buo_f, false) }
+    catch (e) { window.attachEvent("onload", $buo_f) }
+    </script>
+
+
+
+
+<style>
+    .chr-theme--living-color.chr-theme--living-color {
+        --c-accent: 43, 30%, 97%;
+        --c-dominant: 43, 30%, 26%;
+    }
+</style>
+</head>
+<body>
+    
+    
+
+
+
+<div id="focusablePlaceholder" tabindex="0" onfocus="this.remove()">
+    <!-- A first focusable element is focused after the cookie law banner is closed. To prevent visual issues, this element is a placeholder that's gonna be removed on focus. -->
+    <script>function getCookie(e) {
+      for (
+        var n = e + '=',
+          t = decodeURIComponent(document.cookie).split(';'),
+          o = 0;
+        o < t.length;
+        o++
+      ) {
+        for (var r = t[o]; ' ' == r.charAt(0); ) r = r.substring(1)
+        if (0 == r.indexOf(n)) return r.substring(n.length, r.length)
+      }
+      return null
+    }
+    if (getCookie('OptanonAlertBoxClosed')) {
+      document.getElementById('focusablePlaceholder').remove()
+    }</script>
+</div>
+
+<nav class="chr-skip-links" aria-label="Skip links">
+    <a class="chr-button chr-button--primary chr-button--dark" href="#main-content">
+        Skip to main content
+    </a>
+</nav>
+
+
+<script>
+    window.chrComponents = window.chrComponents || {};
+    window.chrComponents.header = {
+  "data": {
+    "header": {
+      "language": "en",
+      "language_id": "1",
+      "is_authenticated": false,
+      "page_refresh_after_sign_in": true,
+      "page_refresh_after_sign_out": true,
+      "sign_up_account_url": "https://signup.christies.com/signup",
+      "sign_up_from_live_chat_account_url": "https://signup.christies.com/signup?fromLiveChat=true",
+      "forgot_your_password_url": "https://www.christies.com/mychristies/passwordretrieval.aspx?",
+      "logo": {
+        "title_txt": "Christie's",
+        "url": "https://www.christies.com/?lid=1&sc_lang=en",
+        "analytics_id": "header_logo",
+        "svg": ""
+      },
+      "sign_in_api_endpoint": {
+        "url": "https://dw-prod-auth.christies.com",
+        "path": "auth/api/v1/login",
+        "method": "POST",
+        "parameters": {
+          "FromSignInToBid": ""
+        }
+      },
+      "sign_out_api_endpoint": {
+        "url": "https://dw-prod-auth.christies.com",
+        "path": "auth/api/v1/logout",
+        "method": "POST",
+        "parameters": {
+          "CurrentPageURI": ""
+        }
+      },
+      "sliding_session_api_endpoint": {
+        "url": "https://dw-prod-auth.christies.com",
+        "path": "auth/api/v1/refresh",
+        "method": "POST",
+        "parameters": null
+      },
+      "get_search_autocomplete_api_endpoint": {
+        "url": "https://search.christies.link",
+        "path": "keypubliclot/v1/api/LotFinder/Autocomplete",
+        "method": "GET",
+        "timeout_ms": 8000,
+        "parameters": {
+          "Size": "5",
+          "Value": ""
+        },
+        "header": {
+          "x-api-key": "w3etROpeli8m8bYEbfkpd2MflLigGa6cB0tk6b1g"
+        }
+      },
+      "upper_navigation_links": [
+        {
+          "title_txt": "How to sell",
+          "url": "https://www.christies.com/auctions/how-to-sell-at-christies.aspx?sc_lang=en&lid=1",
+          "type": "link",
+          "analytics_id": "header_howtosell"
+        }
+      ],
+      "languages": [
+        {
+          "title_txt": "繁",
+          "aria_label_txt": "Traditional Chinese",
+          "query_string_parameters": {
+            "lid": "3",
+            "sc_lang": "zh"
+          }
+        },
+        {
+          "title_txt": "簡",
+          "aria_label_txt": "Simplified Chinese",
+          "query_string_parameters": {
+            "lid": "4",
+            "sc_lang": "zh-cn"
+          }
+        }
+      ],
+      "main_navigation_links": [
+        {
+          "title_txt": "Auctions",
+          "url": "https://www.christies.com/calendar?mode=1&sc_lang=en&lid=1",
+          "type": "link",
+          "analytics_id": "header_auctions"
+        },
+        {
+          "title_txt": "Private Sales",
+          "url": "https://www.christies.com/privatesales/index?lid=1&sc_lang=en",
+          "type": "link",
+          "analytics_id": "header_privatesales"
+        },
+        {
+          "title_txt": "Locations",
+          "url": "https://www.christies.com/locations?sc_lang=en&lid=1",
+          "type": "link",
+          "analytics_id": "header_locations"
+        },
+        {
+          "title_txt": "Departments",
+          "url": "https://www.christies.com/departments/index.aspx?sc_lang=en&lid=1",
+          "type": "link",
+          "analytics_id": "header_departments"
+        },
+        {
+          "title_txt": "Stories",
+          "url": "https://www.christies.com/features?sc_lang=en&lid=1",
+          "type": "link",
+          "analytics_id": "header_stories"
+        },
+        {
+          "title_txt": "Services",
+          "url": "https://www.christies.com/services?sc_lang=en&lid=1",
+          "type": "link",
+          "analytics_id": "header_services"
+        }
+      ],
+      "search": {
+        "number_of_letters_to_start": "3",
+        "time_to_start": "300",
+        "placeholder_txt": "Search by lot or keyword",
+        "url": "https://www.christies.com/search",
+        "parameters": {
+          "sc_lang": "en",
+          "lid": "1",
+          "action": "search",
+          "searchfrom": "header",
+          "entry": ""
+        }
+      },
+      "user_actions": [
+        {
+          "title_txt": "My account",
+          "url": "https://www.christies.com/mychristies/activities.aspx?activitytype=wc&submenutapped=true",
+          "id": "my-account",
+          "analytics_id": "header_myaccount"
+        },
+        {
+          "title_txt": "Sign in",
+          "url": "",
+          "id": "sign-in",
+          "analytics_id": "header_signin"
+        },
+        {
+          "title_txt": "Log out",
+          "url": "",
+          "id": "sign-out",
+          "analytics_id": "header_signout"
+        }
+      ],
+      "access_token_expiration": "0"
+    }
+  },
+  "labels": {
+    "login_modal_title_txt": "Sign in to your account to get recommendations, place bids and register for sales",
+    "login_modal_title_from_live_chat_txt": "Please log in or create an account to chat with a client service representative",
+    "login_modal_username_txt": "Email",
+    "login_modal_username_required_error_txt": "Please fill out email field.",
+    "login_modal_password_txt": "Password",
+    "login_modal_password_required_error_txt": "Please fill out password field.",
+    "login_modal_forgot_your_password_txt": "Forgot your password?",
+    "login_modal_sign_in_txt": "Sign in",
+    "login_modal_create_new_account_txt": "Create new account",
+    "login_modal_error_message_txt": "Something has gone wrong. Please try again or contact Client Services.",
+    "login_modal_show_password_txt": "Reveal password",
+    "login_modal_hide_password_txt": "Hide password",
+    "choose_language_txt": "Choose language",
+    "aria_main_nav_txt": "Primary",
+    "aria_menu_txt": "Menu",
+    "aria_search_txt": "Search",
+    "aria_user_navigation_txt": "User navigation",
+    "aria_search_btn_txt": "Submit search",
+    "aria_search_form_label_txt": "Site",
+    "language_label_txt": "English",
+    "login_modal_error_txt": "Something has gone wrong. Please try again or contact Client Services.",
+    "login_modal_invalid_credentials_txt": "The email address and password that you entered did not match our records. Please double-check and try again, or contact Client Services for further assistance.",
+    "login_modal_account_locked_txt": "You have exceeded the maximum number of attempts to log in. To protect your security, the account has been locked. We've sent you an email with instructions on how to unlock it, or please contact Client Services for further assistance.",
+    "refresh_modal_title_txt": "You've been signed out!",
+    "refresh_modal_message_txt": "You are no longer authenticated. Please refresh your page and sign in again if you wish to bid in auctions.",
+    "refresh_modal_button_txt": "Refresh the page",
+    "placeholder_txt": "Search by lot or keyword",
+    "aria_results_available_singular_txt": "{count} result available",
+    "aria_results_available_plural_txt": "{count} results available",
+    "aria_results_keyboard_navigation": "When autocomplete results are available use Up and Down arrow keys to select the result and the Enter key to perform the search."
+  }
+};
+</script>
+
+<div class="chr-header-footer">
+    <chr-header data-namespace="header"></chr-header>
+
+    <chr-modal-provider></chr-modal-provider>
+</div>
+
+<script>
+    window.chrGlobal = window.chrGlobal || {};
+    window.chrGlobal.labels = {
+        close_modal_txt: 'Close'
+    };
+</script>
+
+<script>
+    window.chrComponents = window.chrComponents || {};
+    window.chrComponents.live_chat = {
+  "data": {
+    "get_user_details_api_endpoint": {
+      "url": "https://www.christies.com",
+      "path": "ChristiesAPIServices/DotcomAPIs/api/mychristies/GetUserDetails",
+      "method": "POST"
+    }
+  }
+};
+</script>
+
+<div class="chr-live-chat">
+    <chr-live-chat></chr-live-chat>
+</div>    <main>
+        
+
+
+    <script>
+        var AnalyticsDataLayer = {
+            page: {
+                name: 'Lot',
+                channel: 'Lot Content',
+                language: 'en',
+                template: 'Lot',
+            },
+            user : {
+                status : 'Not Logged In/No Account',
+                GUID: '',
+                platform: 'web'
+            },
+        }
+    </script>
+
+
+
+    <script>
+        var EnableCookieBanner = true;
+        var IsMobileApp = false;
+    </script>
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="//assets.adobedtm.com/4f105c1434ad/05fddbc767bb/launch-1b477ca5fd6e.min.js" async></script>
+
+
+
+<h2 class="visually-hidden" id="heading__page">Overview</h2>
+
+
+<div id="main-content"></div>
+
+<div>
+        <chr-gallery-provider></chr-gallery-provider>
+        <chr-modal-provider></chr-modal-provider>
+
+    
+
+<chr-global-notice a11yTitle="Global notice">
+    <span class="visually-hidden">Global notice</span>
+<a href="https://www.christies.com/about-us/contact/covid-19-important-notice?sc_lang=en&amp;lid=1" target="_blank" rel="noopener noreferrer" >COVID-19 Important notice</a></chr-global-notice>
+
+
+
+
+
+    <script>
+        AnalyticsDataLayer.lot = {"number":"3","id":"6338411","status":"Closed"};
+        AnalyticsDataLayer.sale = {"type":"Traditional","id":"29191","number":"20043","location":"Geneva"};
+
+        window.chrComponents = window.chrComponents || {};
+        window.chrComponents.lotHeader_1205114186 = {"data":{"save_lot_api_endpoint":{"url":"//www.christies.com","path":"lots_webapi/api/lotslist/SaveLot","method":"POST","parameters":{"object_id":"","apikey":"708878A1-95DB-4DC2-8FBD-1E8A1DCE703C","save":""}},"cost_calculator_api_endpoint":{"url":"//payments.christies.com","path":"REST/JSON/CostCalculator","method":"POST","parameters":{"API_Key":"fdsaGdsdAS","SaleNumber":"20043","LotNumber":"3","LotSuffix":"","Currency":"CHF"}},"lot_primary_action":{"show":false,"is_enabled":false,"button_txt":"","action_display":"modal","action_type":"url","action_value":"","action_event_name":null,"analytics_id":"live_registertobid"},"lots":[{"object_id":"6338411","lot_id_txt":"3","event_type":"Sale","url":"https://www.christies.com/en/lot/lot-6338411","previous_lot_url":"https://www.christies.com/en/lot/lot-6338409","next_lot_url":"https://www.christies.com/en/lot/lot-6338412","title_primary_txt":"ROLEX. A STAINLESS STEEL AUTOMATIC WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX\n","title_secondary_txt":"SIGNED ROLEX, SUBMARINER MODEL, REF. 126610LV, CIRCA 2020\n","title_tertiary_txt":"","estimate_visible":true,"estimate_on_request":false,"price_on_request":false,"is_estimate_unknown":false,"estimate_low":14000.0,"estimate_high":20000.0,"estimate_txt":"CHF 14,000 - CHF 20,000","price_realised":30000.0,"price_realised_txt":"CHF 30,000","lot_assets":[{"display_type":"basic","asset_type":"basic","asset_type_txt":"basic","asset_alt_txt":"ROLEX. A STAINLESS STEEL AUTOMATIC WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX\n","image_url":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?mode=max"},{"display_type":"basic","asset_type":"basic","asset_type_txt":"basic","asset_alt_txt":"ROLEX. A STAINLESS STEEL AUTOMATIC WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX\n","image_url":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_001(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124855).jpg?mode=max"}],"is_saved":false,"show_save":true}],"sale":{"sale_id":"29191","sale_number":"20043","sale_room_code":"GNV","event_type":"Sale","title_txt":"Rare Watches ","start_date":"2021-11-08T13:30Z","end_date":"2021-11-08T00:00Z","registration_close_date":"2021-11-08T08:00Z","location_txt":"Geneva","url":"https://www.christies.com/en/auction/rare-watches-29191/","is_auction_over":true,"is_in_progress":false,"time_zone":"CET"},"ui_state":{"hide_timer":false,"hide_bid_information":false,"hide_tooltip":false,"hide_cost_calculator":false}},"labels":{"lot_txt":"Lot","lot_ended_txt":"Closed","registration_closes_txt":"Registration closes","bidding_starts_txt":"Bidding starts","current_bid_txt":"Current bid","estimate_txt":"Estimate","estimate_on_request_txt":"Estimate on request","price_on_request_txt":"Price on request","price_realised_txt":"Price realised","estimate_unknown_txt":"Estimate unknown","currency_txt":"CHF","closed_txt":"Closed","save_txt":"Save","saved_txt":"Saved","follow_txt":"feature.discovery.lotpages.lotheadermodule.lots.lot.followtext","followed_txt":"feature.discovery.lotpages.lotheadermodule.lots.lot.followedtext","unfollow_txt":"feature.discovery.lotpages.lotheadermodule.lots.lot.unfollowtext","aria_follow_txt":"feature.discovery.lotpages.lotheadermodule.lots.lot.aria.followtext","aria_unfollow_txt":"feature.discovery.lotpages.lotheadermodule.lots.lot.aria.unfollowtext","share_txt":"Share","closing_txt":"Closing","day_txt":"day","days_txt":"days","hour_unit_txt":"h","minute_unit_txt":"m","second_unit_txt":"s","more_txt":"more","share_title_txt":"Share to your social media or via email","try_our_txt":"Try our","cost_calculator_txt":"Cost Calculator","cost_calculator_response_txt":"Below is your estimated cost based on the bid","cost_calculator_submit_txt":"Calculate","cost_calculator_bid_amount_label_txt":"Enter a bid","cost_calculator_generic_error_txt":"Sorry, something went wrong, please try again.","cost_calculator_bid_amount_missing_txt":"Missing amount","cost_calculator_your_bid_txt":"Your bid","cost_calculator_tooltip_btn_txt":"Show tooltip","cost_calculator_tooltip_txt":"Exclusive of all duty, taxes, import VAT and/or customs processing fees.","cost_calculator_title_txt":"Cost Calculator","cost_calculator_disclaimer_txt":"Below is your estimated cost based on the bid","cost_calculator_input_label_txt":"Enter the bid value","cost_calculator_buyers_premium_txt":"Estimated Buyer's Premium","cost_calculator_total_txt":"Estimated cost exclusive of duties","bid_tooltip_txt":"Estimates do not reflect the final hammer price and do not include buyer's premium, and applicable taxes or artist's resale right. Please see Section D of the Conditions of Sale for full details.","timer_tooltip_txt":"Please note that if a bid is placed on this lot within the final three minutes of the closing time indicated in the countdown clock, three additional minutes will be added to the designated closing time. See our <a href=\"https://www.christies.com/about-us/help.aspx\">FAQs</a> for further information.","auction_happening_now_txt":"Happening now","aria_scroll_to_top_txt":"Scroll to top","loading_txt":"Loading details"}};
+
+    </script>
+    <div data-analytics-region="lotheader-full" class="chr-lot-header">
+        <div class="chr-lot-header--full chr-theme--living-color">
+            <div class="chr-lot-header__breadcrumb">
+                <div class="container-fluid chr-lot-header__breadcrumb-inner">
+
+                    <nav aria-label="Breadcrumb" class="chr-breadcrumb">
+                        <ol class="chr-breadcrumb__list">
+                            <li class="chr-breadcrumb__list-item chr-breadcrumb__list-item--active">
+                                <a class="chr-breadcrumb__link"
+                                   href="https://www.christies.com/en/auction/rare-watches-29191/"
+                                   data-track="breadcrumb|auction-overview">
+                                        <chr-icon class="pr-2" type="circle" icon="chevron"></chr-icon>
+                                    <div class="chr-lot-header__breadcrumb-detail">
+                                        <div>
+                                                <span class="chr-body-s-bold">November 8</span>
+                                        <span class="chr-body-s mr-1">
+                                                 | 
+                                            Live Auction 20043
+                                        </span>
+                                        </div>
+                                        <span class="chr-heading-xs-serif">Rare Watches </span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ol>
+                    </nav>
+
+                        <div class="d-none d-md-flex">
+                            <div class="chr-item-pagination">
+                                <a href="https://www.christies.com/en/lot/lot-6338409" aria-label="Previous">
+                                    <chr-icon icon="arrow"></chr-icon>
+                                </a>
+                                <span class="chr-item-pagination__label">Lot 3 </span>
+                                <a href="https://www.christies.com/en/lot/lot-6338412" aria-label="Next">
+                                    <chr-icon icon="arrow" rotate="180"></chr-icon>
+                                </a>
+                            </div>
+                        </div>
+                </div>
+                    <div class="d-block d-md-none">
+                        <div class="chr-lot-header__breadcrumb-pagination">
+                            <div class="container-fluid chr-lot-header__breadcrumb-pagination-inner">
+                                <div class="chr-item-pagination">
+                                    <a href="https://www.christies.com/en/lot/lot-6338409" aria-label="Previous">
+                                        <chr-icon icon="arrow"></chr-icon>
+                                    </a>
+                                    <span class="chr-item-pagination__label">3 </span>
+                                    <a href="https://www.christies.com/en/lot/lot-6338412" aria-label="Next">
+                                        <chr-icon icon="arrow" rotate="180"></chr-icon>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="d-none col-lg-1 d-lg-block">
+                            <div class="chr-lot-header__thumbnails">
+                                    <chr-lot-header-gallery-button lot-id="6338411" data-namespace="lotHeader_1205114186" gallery-item-index="1" region="lot-header-thumbnail-1">
+                                        <div class="chr-lot-header__thumbnail">
+                                            <div class="chr-img__wrapper chr-img__wrapper--natural-height" data-img-id="4c6b9da2-7957-4c0a-93c9-d6ec8e4f6fd1"><img alt="ROLEX. A STAINLESS STEEL AUTOMATIC WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX
+" class="chr-img lazyload" data-sizes="100px" data-srcset="https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_001(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124855).jpg?w=100 100w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_001(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124855).jpg?w=200 200w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_001(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124855).jpg?w=300 300w" src="https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_001(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124855).jpg?w=1"></img></div>
+                                        </div>
+                                    </chr-lot-header-gallery-button>
+                                                            </div>
+                    </div>
+                    <div class="col-12 col-md-7 col-lg-7 chr-lot-header__media-column">
+                        <div class="chr-lot-header__media">
+                            <chr-lot-header-gallery-button data-namespace="lotHeader_1205114186" lot-id="6338411" gallery-item-index="0" region="lot-header-image">
+                                    <div class="chr-lot-header__image">
+                                        <div class="chr-lot-header__image-container">
+                                            <div class="chr-img__wrapper chr-img__wrapper--natural-height" data-img-id="380e631b-c0fa-4611-a306-0dc713ba0a23"><img alt="ROLEX. A STAINLESS STEEL AUTOMATIC WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX
+" class="chr-img lazyload" data-sizes="(min-width: 1224px) 1010px, (min-width: 768px) 695px, (min-width: 576px) 750px, 560px" data-srcset="https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=560&amp;maxheight=350 560w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=1120&amp;maxheight=700 1120w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=1680&amp;maxheight=1050 1680w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=750&amp;maxheight=350 750w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=1500&amp;maxheight=700 1500w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=2250&amp;maxheight=1050 2250w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=695&amp;maxheight=650 695w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=1390&amp;maxheight=1300 1390w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=2085&amp;maxheight=1950 2085w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=1010&amp;maxheight=650 1010w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=2020&amp;maxheight=1300 2020w, https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?maxwidth=3030&amp;maxheight=1950 3030w" src="https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0003_000(rolex_a_stainless_steel_automatic_wristwatch_with_sweep_centre_seconds124845).jpg?w=1"></img></div>
+                                        </div>
+                                    </div>
+                            </chr-lot-header-gallery-button>
+                            <div class="justify-content-center d-md-flex d-lg-block">
+                                    <chr-lot-header-gallery-button lot-id="6338411" data-namespace="lotHeader_1205114186" gallery-item-index="0" region="lot-header-thumbnail-0">
+                                        <div class="chr-lot-header__more-button">
+                                            <chr-icon icon="plus" type="circle" color="dark"></chr-icon>
+                                            <span class="chr-label">1 More</span>
+                                        </div>
+                                    </chr-lot-header-gallery-button>
+                                                            </div>
+                        </div>
+                    </div>
+                    <div class="chr-lot-header__information-column col-sm-12 col-md-5 col-lg-4">
+                        <div class="chr-lot-header__information">
+                            <div class="chr-lot-header__description">
+                                    <chr-tooltip button="Special Notice" uid="specialNoticeTip" position="left" icon="asterisk" clickable>
+                                        This lot is subject to standard Swiss VAT rules an&hellip;
+
+                                            <a href="#accordion_special-notice">Read more</a>
+                                    </chr-tooltip>
+                                                                    <span class="chr-label">ROLEXSUBMARINER, REF. 126610LVTHE PROPERTY OF A PRIVATE COLLECTOR</span>
+                            </div>
+                            <span class="chr-lot-header__artist-name">ROLEX. A STAINLESS STEEL AUTOMATIC WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX
+</span>
+                            <h1 class="chr-lot-header__title">SIGNED ROLEX, SUBMARINER MODEL, REF. 126610LV, CIRCA 2020
+</h1>
+                            <div class="chr-lot-header__lot--quantity"></div>
+                            <div class="mt-3">
+                                <chr-lot-header-dynamic-content data-namespace="lotHeader_1205114186" lot-id="6338411">
+                                </chr-lot-header-dynamic-content>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fixed header -->
+    <span id="fixed-head-observer" class="fixed-tracker"></span>
+    <chr-fixed-wrapper tracker="#fixed-head-observer">
+        <chr-lot-header data-namespace="lotHeader_1205114186"
+                        display="collapsed"
+                        lot_id="6338411"
+                        title_primary_txt="ROLEX. A STAINLESS STEEL AUTOMATIC WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX
+"
+                        title_secondary_txt="SIGNED ROLEX, SUBMARINER MODEL, REF. 126610LV, CIRCA 2020
+" living-color>
+        </chr-lot-header>
+    </chr-fixed-wrapper>
+    <!-- /fixed header -->
+
+</div>
+<div class="chr-lot-detail__main">
+   
+    <div class="chr-lot-detail__vertical-scroll col-2">
+        <chr-sticky-wrapper top="25vh">
+            <chr-vertical-scroll-nav></chr-vertical-scroll-nav>
+        </chr-sticky-wrapper>
+    </div>
+
+    
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 col-lg-5 offset-lg-2">
+                <div data-scroll-section="Details" id="details">
+                    <section class="chr-lot-details">
+                        <div class="chr-lot-section__center">
+                                <chr-accordion>
+                                    <chr-accordion-item open accordion-id="0">
+                                        <div slot="header">Details</div>
+                                        <div slot="content" class="content-zone chr-lot-section__accordion--content">
+                                            <span class="chr-lot-section__accordion--text"><b>ROLEX. A STAINLESS STEEL AUTOMATIC WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX</b><br>
+SIGNED ROLEX, SUBMARINER MODEL, REF. 126610LV, CIRCA 2020<br>
+<b>Movement: </b>Automatic<br>
+<b>Dial: </b>Black<br>
+<b>Case: </b>41 mm. diam.<br>
+<b>With: </b>Stainless steel Rolex Oyster bracelet with deployant clasp stamped 314, overall length of approximately. 200 mm., International Guarantee dated 2 October 2020, sales tags, product literature, presentation box and outer packaging<br>
+</span>
+                                        </div>
+                                    </chr-accordion-item>
+                                </chr-accordion>
+                                                                                                                                                <chr-accordion id="accordion_special-notice">
+                                    <chr-accordion-item open accordion-id="4">
+                                        <div slot="header">Special notice</div>
+                                        <div slot="content" class="content-zone chr-lot-section__accordion--content">
+                                            <span class="chr-lot-section__accordion--text"><br/> This lot is subject to standard Swiss VAT rules and 7.7% VAT will be charged on the ‘hammer’ and the ‘buyer’s premium’</span>
+                                        </div>
+                                    </chr-accordion-item>
+                                </chr-accordion>
+                                                        
+                        </div>
+                    </section>
+                </div>
+            </div>
+            <div class="col-12 col-md-5 col-lg-3 offset-md-1">
+                <section class="chr-specialist-info">
+
+                    
+    <h2 class="chr-heading-s-sans mb-4">
+        Brought to you by
+    </h2>
+    <div class="chr-specialist-info__row">
+        <div class="chr-avatar mr-3">
+            <div class="chr-avatar__image chr-avatar__image--md">
+<div class="chr-img__wrapper" data-img-id="5d1923d0-9d81-480f-baea-31021389d856" style="padding-top: 100%"><img alt="Remi Guillemin" class="chr-img lazyload" data-sizes="60px" data-srcset="https://www.christies.com/img/specialistImages/GuilleminRemi__Remi_Remi_1292__Remi_Remi_1292.jpg?w=60 60w, https://www.christies.com/img/specialistImages/GuilleminRemi__Remi_Remi_1292__Remi_Remi_1292.jpg?w=120 120w, https://www.christies.com/img/specialistImages/GuilleminRemi__Remi_Remi_1292__Remi_Remi_1292.jpg?w=180 180w" src="https://www.christies.com/img/specialistImages/GuilleminRemi__Remi_Remi_1292__Remi_Remi_1292.jpg?w=1"></img></div>            </div>
+        </div>
+        <div class="chr-specialist-info__wrapper">
+            <span class="chr-specialist-info__name">
+                Remi Guillemin
+            </span>
+            <span class="chr-specialist-info__category">
+                Head of Department, Geneva
+            </span>
+        </div>
+    </div>
+        <p class="chr-specialist-info__report--label">
+            Check the condition report or get in touch for additional information about this
+        </p>
+    <div class="chr-specialist-info__contacts">
+        <a class="chr-specialist-info__contacts--email" href="mailto:rguillemin@christies.com">
+            rguillemin@christies.com
+        </a>
+        <a class="chr-specialist-info__contacts--phone" href="tel:+41223191797">
+            +41 22 319 1797
+        </a>
+    </div>
+
+
+                        <chr-inline-modal-provider>
+
+                                <chr-modal-content slot="condition-report-interstitial" id="condition-report-interstitial">
+                                    <div class="d-flex flex-column align-items-center">
+                                        <h2 class="chr-heading-s-serif mb-6" data-focus-trap="init" tab-index="-1">Condition report</h2>
+                                        <p class="chr-body mb-5">If you wish to view the condition report of this lot, please sign in to your account. </p>
+                                        <chr-button block action="toggleModal"
+                                                    action-target="login"
+                                                    class="align-self-stretch">
+                                            Sign in
+                                        </chr-button>
+                                    </div>
+                                </chr-modal-content>
+
+                        </chr-inline-modal-provider>
+                        <chr-button 
+                                    action="toggleModal"
+                                    action-target="condition-report-interstitial" 
+                                    block type="secondary"
+                                    size="s"
+                                    track-id="viewconditionreport">View condition report</chr-button>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <div class="chr-theme--living-color">
+        <div class="row">
+            <div class="container-fluid">
+                <div class="col-md-8 col-lg-7 offset-md-2">
+                    <section data-scroll-section="Lot essay" id="story" class="chr-lot-section">
+                        <div class="chr-lot-section__center">
+                            <h2 class="chr-lot-article__title">Lot Essay</h2>
+                            <chr-readmore-expander button-variant="stand-alone" label-more="Read more" label-less="Read less" height="400" scroll-on-close="true" data-qa="lot-essay__expander">
+                                <div class="content-zone chr-body">
+                                    The present timepiece is offered in 'like new' overall condition and sold with the full set of accessories.<br>
+<br>
+It is affectionately nicknamed the "Kermit" by collectors due to the green ceramic bezel and black dial combination that was used for the Submariner 16610LV "Kermit" launched in 2003 to celebrate 50 years of the Submariner model. The ceramic green bezel is a feature of the recently discontinued reference 116610LV, known to collectors as the “Hulk” which has a green dial. <br>
+<br>
+This new reference features redesigned thinner slightly concave lugs which give the watch a more streamlined profile than its predecessors and a new calibre 3525 movement with approximately 70 hours power reserve. The case is made from the special corrosion resistant Rolex alloy “Oystersteel”, the “Cerachrom” bezel is virtually scratchproof.<br>
+<br>
+
+                                </div>
+                            </chr-readmore-expander>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container-fluid chr-lot-page__more-from">
+        <section data-scroll-section="More from" id="more-from" class="row chr-curated-lot-list">
+            <div class="col-12 col-lg-10 offset-lg-2" id="more-lots">
+                <div class="mb-2 pr-4 pr-lg-8 d-flex justify-content-between">
+                    <div>
+                        <h2 class="chr-heading-l-serif">
+                            <span class="chr-label-caps chr-label-bold d-block">More from</span>
+                            Rare Watches 
+                        </h2>
+                    </div>
+                        <div class="d-none d-md-flex align-items-center">
+                                <chr-button href="https://www.christies.com/en/auction/rare-watches-29191/" type="icon-label">
+        <span class="chr-action">View All</span>
+        <chr-icon icon="chevron" type="square" rotate="180"></chr-icon>
+    </chr-button>
+
+                        </div>
+                </div>
+                    <script>
+        window.chrComponents = window.chrComponents || {};
+        window.chrComponents.carousel_677142815 = {"data":{},"labels":{"item_current_of_total_txt":"Item {current} out of {total}","previous_txt":"Visually slide to previous slide button","next_txt":"Visually slide to next slide button"}};
+        window.chrComponents.moreFrom = {"data":{"lots":[{"object_id":"6338412","lot_id_txt":"4","event_type":"Sale","start_date":"2021-11-08T14:30Z","end_date":"2021-11-08T00:00Z","time_zone":"CET","is_in_progress":false,"is_auction_over":true,"url":"https://www.christies.com/lotfinder/lot/rolex-a-stainless-steel-dual-time-wristwatch-6338412-details.aspx?from=salesummary&intObjectID=6338412&lid=1","title_primary_txt":"ROLEX. A STAINLESS STEEL DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX\n","title_secondary_txt":"SIGNED ROLEX, GMT-MASTER II MODEL, REF. 126710BLRO, CIRCA 2020\n","title_tertiary_txt":"","consigner_information":"<b>ROLEX</b><br>GMT-MASTER II 'PEPSI', REF. 126710BLRO<br><br>THE PROPERTY OF A PRIVATE COLLECTOR","description_txt":"ROLEX. A STAINLESS STEEL DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX, SIGNED ROLEX, GMT-MASTER II MODEL, REF. 126710BLRO, CIRCA 2020, Movement: Automatic, Dial: Black, Case: 40 mm. diam., With: Stainless steel Rolex Jubilee bracelet with deployant clasp stamped Z8H, overall length approximatly 170 mm., International Guarantee stamped by Spanish retailer R.A. Mallorca 1879 and dated 31 July 2020, leather card holder, product literature, pouch, sales tag, presentation box and outer packaging","image":{"image_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0004_000(rolex_a_stainless_steel_dual_time_wristwatch_with_sweep_centre_seconds124904).jpg?mode=max","image_mobile_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0004_000(rolex_a_stainless_steel_dual_time_wristwatch_with_sweep_centre_seconds124904).jpg?mode=max","image_tablet_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0004_000(rolex_a_stainless_steel_dual_time_wristwatch_with_sweep_centre_seconds124904).jpg?mode=max","image_desktop_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0004_000(rolex_a_stainless_steel_dual_time_wristwatch_with_sweep_centre_seconds124904).jpg?mode=max","image_alt_text":"ROLEX. A STAINLESS STEEL DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX\n"},"estimate_visible":true,"estimate_on_request":false,"is_estimate_unknown":false,"price_on_request":false,"estimate_low":"12000.00","estimate_high":"18000.00","estimate_txt":"CHF 12,000 - CHF 18,000","price_realised":"25,000","price_realised_txt":"CHF 25,000","current_bid":"","current_bid_txt":"","is_saved":false,"show_save":true,"registration_close_date":"","AlternativeLotId":"20043.4"},{"object_id":"6338413","lot_id_txt":"5","event_type":"Sale","start_date":"2021-11-08T14:30Z","end_date":"2021-11-08T00:00Z","time_zone":"CET","is_in_progress":false,"is_auction_over":true,"url":"https://www.christies.com/lotfinder/lot/rolex-a-stainless-steel-dual-time-wristwatch-6338413-details.aspx?from=salesummary&intObjectID=6338413&lid=1","title_primary_txt":"ROLEX. A STAINLESS STEEL DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX\n","title_secondary_txt":"SIGNED ROLEX, GMT-MASTER II MODEL, REF.126710BLNR, CIRCA 2019\n","title_tertiary_txt":"","consigner_information":"<b>ROLEX</b><br>GMT-MASTER II, REF.126710BLNR<br><br>THE PROPERTY OF A PRIVATE COLLECTOR","description_txt":"ROLEX. A STAINLESS STEEL DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX, SIGNED ROLEX, GMT-MASTER II MODEL, REF.126710BLNR, CIRCA 2019, Movement: Automatic , Dial: Black , Case: 40 mm. diam., With: Stainless steel Rolex Jubilee bracelet with deployant clasp stamped 2EW, overall length approximately 195 mm., International Guarantee stamped by French retailer Boutique Rolex Vendome and dated 13 November 2019, leather card holder, product literature, pouch, presentation box and outer packaging","image":{"image_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0005_000(rolex_a_stainless_steel_dual_time_wristwatch_with_sweep_centre_seconds124921).jpg?mode=max","image_mobile_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0005_000(rolex_a_stainless_steel_dual_time_wristwatch_with_sweep_centre_seconds124921).jpg?mode=max","image_tablet_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0005_000(rolex_a_stainless_steel_dual_time_wristwatch_with_sweep_centre_seconds124921).jpg?mode=max","image_desktop_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0005_000(rolex_a_stainless_steel_dual_time_wristwatch_with_sweep_centre_seconds124921).jpg?mode=max","image_alt_text":"ROLEX. A STAINLESS STEEL DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX\n"},"estimate_visible":true,"estimate_on_request":false,"is_estimate_unknown":false,"price_on_request":false,"estimate_low":"12000.00","estimate_high":"20000.00","estimate_txt":"CHF 12,000 - CHF 20,000","price_realised":"27,500","price_realised_txt":"CHF 27,500","current_bid":"","current_bid_txt":"","is_saved":false,"show_save":true,"registration_close_date":"","AlternativeLotId":"20043.5"},{"object_id":"6338414","lot_id_txt":"6","event_type":"Sale","start_date":"2021-11-08T14:30Z","end_date":"2021-11-08T00:00Z","time_zone":"CET","is_in_progress":false,"is_auction_over":true,"url":"https://www.christies.com/lotfinder/lot/rolex-a-stainless-steel-and-18k-pink-6338414-details.aspx?from=salesummary&intObjectID=6338414&lid=1","title_primary_txt":"ROLEX. A STAINLESS STEEL AND 18K PINK GOLD AUTOMATIC DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX\n","title_secondary_txt":"SIGNED ROLEX, GMT-MASTER II MODEL, REF. 126711CHNR, CIRCA 2021\n","title_tertiary_txt":"","consigner_information":"<b>ROLEX</b><br>GMT-MASTER II 'ROOT BEER' , REF. 126711CHNR<br><br>THE PROPERTY OF A PRIVATE COLLECTOR","description_txt":"ROLEX. A STAINLESS STEEL AND 18K PINK GOLD AUTOMATIC DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX, SIGNED ROLEX, GMT-MASTER II MODEL, REF. 126711CHNR, CIRCA 2021, Movement: Automatic, Dial: Black, Case: 40 mm. diam., With: 18k pink gold and stainless steel Rolex Oyster bracelet with deployant clasp stamped 1LP, overall length of approximately 205 mm., International Guarantee, leather card holder, product literature, sale tag, presentation box and outer packaging","image":{"image_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0006_000(rolex_a_stainless_steel_and_18k_pink_gold_automatic_dual_time_wristwat124938).jpg?mode=max","image_mobile_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0006_000(rolex_a_stainless_steel_and_18k_pink_gold_automatic_dual_time_wristwat124938).jpg?mode=max","image_tablet_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0006_000(rolex_a_stainless_steel_and_18k_pink_gold_automatic_dual_time_wristwat124938).jpg?mode=max","image_desktop_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0006_000(rolex_a_stainless_steel_and_18k_pink_gold_automatic_dual_time_wristwat124938).jpg?mode=max","image_alt_text":"ROLEX. A STAINLESS STEEL AND 18K PINK GOLD AUTOMATIC DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX\n"},"estimate_visible":true,"estimate_on_request":false,"is_estimate_unknown":false,"price_on_request":false,"estimate_low":"12000.00","estimate_high":"18000.00","estimate_txt":"CHF 12,000 - CHF 18,000","price_realised":"27,500","price_realised_txt":"CHF 27,500","current_bid":"","current_bid_txt":"","is_saved":false,"show_save":true,"registration_close_date":"","AlternativeLotId":"20043.6"},{"object_id":"6338415","lot_id_txt":"7","event_type":"Sale","start_date":"2021-11-08T14:30Z","end_date":"2021-11-08T00:00Z","time_zone":"CET","is_in_progress":false,"is_auction_over":true,"url":"https://www.christies.com/lotfinder/lot/rolex-an-18k-pink-gold-dual-time-6338415-details.aspx?from=salesummary&intObjectID=6338415&lid=1","title_primary_txt":"ROLEX. AN 18K PINK GOLD DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX\n","title_secondary_txt":"SIGNED ROLEX, GMT-MASTER II MODEL, REF. 126715CHNR, CIRCA 2018\n","title_tertiary_txt":"","consigner_information":"<b>ROLEX</b><br>GMT-MASTER II, REF. 126715CHNR<br><br>THE PROPERTY OF A PRIVATE COLLECTOR","description_txt":"ROLEX. AN 18K PINK GOLD DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX, SIGNED ROLEX, GMT-MASTER II MODEL, REF. 126715CHNR, CIRCA 2018, Movement: Automatic, Dial: Black, Case: 40 mm. diam., With: 18k pink gold Rolex Oyster bracelet and deployant clasp stamped MOV, overall length approximately 180 mm., International Guarantee stamped by Swiss retailer Villiger, leather card holder, product literature, pouch, sales tag, presentation box and outer packaging","image":{"image_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0007_000(rolex_an_18k_pink_gold_dual_time_wristwatch_with_sweep_centre_seconds125000).jpg?mode=max","image_mobile_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0007_000(rolex_an_18k_pink_gold_dual_time_wristwatch_with_sweep_centre_seconds125000).jpg?mode=max","image_tablet_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0007_000(rolex_an_18k_pink_gold_dual_time_wristwatch_with_sweep_centre_seconds125000).jpg?mode=max","image_desktop_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0007_000(rolex_an_18k_pink_gold_dual_time_wristwatch_with_sweep_centre_seconds125000).jpg?mode=max","image_alt_text":"ROLEX. AN 18K PINK GOLD DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE, BRACELET, GUARANTEE AND BOX\n"},"estimate_visible":true,"estimate_on_request":false,"is_estimate_unknown":false,"price_on_request":false,"estimate_low":"26000.00","estimate_high":"45000.00","estimate_txt":"CHF 26,000 - CHF 45,000","price_realised":"43,750","price_realised_txt":"CHF 43,750","current_bid":"","current_bid_txt":"","is_saved":false,"show_save":true,"registration_close_date":"","AlternativeLotId":"20043.7"},{"object_id":"6338416","lot_id_txt":"8","event_type":"Sale","start_date":"2021-11-08T14:30Z","end_date":"2021-11-08T00:00Z","time_zone":"CET","is_in_progress":false,"is_auction_over":true,"url":"https://www.christies.com/lotfinder/lot/rolex-a-rare-and-attractive-18k-gold-6338416-details.aspx?from=salesummary&intObjectID=6338416&lid=1","title_primary_txt":"ROLEX. A RARE AND ATTRACTIVE 18K GOLD, DIAMOND AND SAPPHIRE-SET AUTOMATIC DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE AND BRACELET\n","title_secondary_txt":"SIGNED ROLEX, GMT-MASTER II MODEL, REF. 116748, CIRCA 2007\n","title_tertiary_txt":"","consigner_information":"<b>ROLEX</b><br>GOLD, DIAMOND AND SAPPHIRE GMT-MASTER II, REF. 116748","description_txt":"ROLEX. A RARE AND ATTRACTIVE 18K GOLD, DIAMOND AND SAPPHIRE-SET AUTOMATIC DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE AND BRACELET, SIGNED ROLEX, GMT-MASTER II MODEL, REF. 116748, CIRCA 2007, Movement: Automatic , Dial: Black , Case: 40 mm. diam. , With: 18k gold Rolex Oyster bracelet and deployant clasp, overall length approximately 200 mm., Rolex service quote dated 29 September 2021","image":{"image_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0008_000(rolex_a_rare_and_attractive_18k_gold_diamond_and_sapphire-set_automati125023).jpg?mode=max","image_mobile_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0008_000(rolex_a_rare_and_attractive_18k_gold_diamond_and_sapphire-set_automati125023).jpg?mode=max","image_tablet_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0008_000(rolex_a_rare_and_attractive_18k_gold_diamond_and_sapphire-set_automati125023).jpg?mode=max","image_desktop_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0008_000(rolex_a_rare_and_attractive_18k_gold_diamond_and_sapphire-set_automati125023).jpg?mode=max","image_alt_text":"ROLEX. A RARE AND ATTRACTIVE 18K GOLD, DIAMOND AND SAPPHIRE-SET AUTOMATIC DUAL TIME WRISTWATCH WITH SWEEP CENTRE SECONDS, DATE AND BRACELET\n"},"estimate_visible":true,"estimate_on_request":false,"is_estimate_unknown":false,"price_on_request":false,"estimate_low":"40000.00","estimate_high":"60000.00","estimate_txt":"CHF 40,000 - CHF 60,000","price_realised":"68,750","price_realised_txt":"CHF 68,750","current_bid":"","current_bid_txt":"","is_saved":false,"show_save":true,"registration_close_date":"","AlternativeLotId":"20043.8"},{"object_id":"6338418","lot_id_txt":"9","event_type":"Sale","start_date":"2021-11-08T14:30Z","end_date":"2021-11-08T00:00Z","time_zone":"CET","is_in_progress":false,"is_auction_over":true,"url":"https://www.christies.com/lotfinder/lot/rolex-a-stainless-steel-automatic-chronograph-wristwatch-6338418-details.aspx?from=salesummary&intObjectID=6338418&lid=1","title_primary_txt":"ROLEX. A STAINLESS STEEL AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, GUARANTEE AND BOX\n","title_secondary_txt":"SIGNED ROLEX, DAYTONA MODEL, REF. 116500LN, CIRCA 2019\n","title_tertiary_txt":"","consigner_information":"<b>ROLEX</b><br>DAYTONA, REF. 116500LN<br><br>THE PROPERTY OF A PRIVATE COLLECTOR","description_txt":"ROLEX. A STAINLESS STEEL AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, GUARANTEE AND BOX, SIGNED ROLEX, DAYTONA MODEL, REF. 116500LN, CIRCA 2019, Movement: Automatic, Dial: Black, Case: 40 mm. diam., With: Stainless steel Rolex Oyster bracelet and deployant clasp stamped T5C, overall length approximately 210 mm., International Guarantee stamped by Swiss retailer Beyer and dated 16 July 2019, leather card holder, product literature, sale tag, product literature, presentation box and outer packaging","image":{"image_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0009_000(rolex_a_stainless_steel_automatic_chronograph_wristwatch_with_bracelet125044).jpg?mode=max","image_mobile_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0009_000(rolex_a_stainless_steel_automatic_chronograph_wristwatch_with_bracelet125044).jpg?mode=max","image_tablet_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0009_000(rolex_a_stainless_steel_automatic_chronograph_wristwatch_with_bracelet125044).jpg?mode=max","image_desktop_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0009_000(rolex_a_stainless_steel_automatic_chronograph_wristwatch_with_bracelet125044).jpg?mode=max","image_alt_text":"ROLEX. A STAINLESS STEEL AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, GUARANTEE AND BOX\n"},"estimate_visible":true,"estimate_on_request":false,"is_estimate_unknown":false,"price_on_request":false,"estimate_low":"14000.00","estimate_high":"24000.00","estimate_txt":"CHF 14,000 - CHF 24,000","price_realised":"35,000","price_realised_txt":"CHF 35,000","current_bid":"","current_bid_txt":"","is_saved":false,"show_save":true,"registration_close_date":"","AlternativeLotId":"20043.9"},{"object_id":"6338420","lot_id_txt":"10","event_type":"Sale","start_date":"2021-11-08T14:30Z","end_date":"2021-11-08T00:00Z","time_zone":"CET","is_in_progress":false,"is_auction_over":true,"url":"https://www.christies.com/lotfinder/lot/rolex-a-stainless-steel-automatic-chronograph-wristwatch-6338420-details.aspx?from=salesummary&intObjectID=6338420&lid=1","title_primary_txt":"ROLEX. A STAINLESS STEEL AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, GUARANTEE AND BOX\n","title_secondary_txt":"SIGNED ROLEX, DAYTONA MODEL, REF. 116500LN, CIRCA 2020\n","title_tertiary_txt":"","consigner_information":"<b>ROLEX</b><br>DAYTONA, REF. 116500LN<br><br>THE PROPERTY OF A PRIVATE COLLECTOR","description_txt":"ROLEX. A STAINLESS STEEL AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, GUARANTEE AND BOX, SIGNED ROLEX, DAYTONA MODEL, REF. 116500LN, CIRCA 2020, Movement: Automatic, Dial: White, Case: 40 mm. diam., With: Stainless steel Rolex Oyster bracelet with deployant clasp stamped 654, overall length of approx. 195 mm., International Guarantee stamped by Swiss retailer Beyer Chronometrie and dated 19 May 2020, leather card holder, product literature, sale tag, presentation box and outer packaging","image":{"image_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0010_000(rolex_a_stainless_steel_automatic_chronograph_wristwatch_with_bracelet125102).jpg?mode=max","image_mobile_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0010_000(rolex_a_stainless_steel_automatic_chronograph_wristwatch_with_bracelet125102).jpg?mode=max","image_tablet_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0010_000(rolex_a_stainless_steel_automatic_chronograph_wristwatch_with_bracelet125102).jpg?mode=max","image_desktop_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0010_000(rolex_a_stainless_steel_automatic_chronograph_wristwatch_with_bracelet125102).jpg?mode=max","image_alt_text":"ROLEX. A STAINLESS STEEL AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, GUARANTEE AND BOX\n"},"estimate_visible":true,"estimate_on_request":false,"is_estimate_unknown":false,"price_on_request":false,"estimate_low":"14000.00","estimate_high":"24000.00","estimate_txt":"CHF 14,000 - CHF 24,000","price_realised":"50,000","price_realised_txt":"CHF 50,000","current_bid":"","current_bid_txt":"","is_saved":false,"show_save":true,"registration_close_date":"","AlternativeLotId":"20043.10"},{"object_id":"6338429","lot_id_txt":"11","event_type":"Sale","start_date":"2021-11-08T14:30Z","end_date":"2021-11-08T00:00Z","time_zone":"CET","is_in_progress":false,"is_auction_over":true,"url":"https://www.christies.com/lotfinder/lot/rolex-an-attractive-18k-white-gold-automatic-6338429-details.aspx?from=salesummary&intObjectID=6338429&lid=1","title_primary_txt":"ROLEX. AN ATTRACTIVE 18K WHITE GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH PINK MOTHER-OF-PEARL DIAL\n","title_secondary_txt":"SIGNED ROLEX, DAYTONA 'BEACH' MODEL, REF. 116519, CIRCA 2000\n","title_tertiary_txt":"","consigner_information":"<b>ROLEX</b><br>DAYTONA BEACH","description_txt":"ROLEX. AN ATTRACTIVE 18K WHITE GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH PINK MOTHER-OF-PEARL DIAL, SIGNED ROLEX, DAYTONA 'BEACH' MODEL, REF. 116519, CIRCA 2000, Movement: Automatic, Dial: Pink mother-of pearl , Case: 40 mm. diam., With: 18k white gold Rolex deployant clasp stamped 16519","image":{"image_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0011_000(rolex_an_attractive_18k_white_gold_automatic_chronograph_wristwatch_wi125129).jpg?mode=max","image_mobile_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0011_000(rolex_an_attractive_18k_white_gold_automatic_chronograph_wristwatch_wi125129).jpg?mode=max","image_tablet_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0011_000(rolex_an_attractive_18k_white_gold_automatic_chronograph_wristwatch_wi125129).jpg?mode=max","image_desktop_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0011_000(rolex_an_attractive_18k_white_gold_automatic_chronograph_wristwatch_wi125129).jpg?mode=max","image_alt_text":"ROLEX. AN ATTRACTIVE 18K WHITE GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH PINK MOTHER-OF-PEARL DIAL\n"},"estimate_visible":true,"estimate_on_request":false,"is_estimate_unknown":false,"price_on_request":false,"estimate_low":"40000.00","estimate_high":"60000.00","estimate_txt":"CHF 40,000 - CHF 60,000","price_realised":"56,250","price_realised_txt":"CHF 56,250","current_bid":"","current_bid_txt":"","is_saved":false,"show_save":true,"registration_close_date":"","AlternativeLotId":"20043.11"},{"object_id":"6338430","lot_id_txt":"12","event_type":"Sale","start_date":"2021-11-08T14:30Z","end_date":"2021-11-08T00:00Z","time_zone":"CET","is_in_progress":false,"is_auction_over":true,"url":"https://www.christies.com/lotfinder/lot/rolex-a-rare-and-attractive-18k-white-6338430-details.aspx?from=salesummary&intObjectID=6338430&lid=1","title_primary_txt":"ROLEX. A RARE AND ATTRACTIVE 18K WHITE GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH TURQUOISE DIAL, GUARANTEE AND BOX\n","title_secondary_txt":"SIGNED ROLEX, DAYTONA MODEL, REF. 116509, CIRCA 2017\n","title_tertiary_txt":"","consigner_information":"<b>ROLEX</b><br>DAYTONA WITH TURQUOISE DIAL<br><br>THE PROPERTY OF A PRIVATE COLLECTOR","description_txt":"ROLEX. A RARE AND ATTRACTIVE 18K WHITE GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH TURQUOISE DIAL, GUARANTEE AND BOX, SIGNED ROLEX, DAYTONA MODEL, REF. 116509, CIRCA 2017, Movement: Automatic , Dial: Turquoise, Case: 40 mm. diam., With: 18k white gold Rolex Oyster bracelet and deployant clasp stamped G8Z, overall length approximately 200 mm., International Guarantee stamped by Swiss retailer Chrono-Time and dated 18 July 2017, leather card holder, product literature, sales tag, presentation box and outer packaging","image":{"image_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0012_000(rolex_a_rare_and_attractive_18k_white_gold_automatic_chronograph_wrist125157).jpg?mode=max","image_mobile_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0012_000(rolex_a_rare_and_attractive_18k_white_gold_automatic_chronograph_wrist125157).jpg?mode=max","image_tablet_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0012_000(rolex_a_rare_and_attractive_18k_white_gold_automatic_chronograph_wrist125157).jpg?mode=max","image_desktop_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0012_000(rolex_a_rare_and_attractive_18k_white_gold_automatic_chronograph_wrist125157).jpg?mode=max","image_alt_text":"ROLEX. A RARE AND ATTRACTIVE 18K WHITE GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH TURQUOISE DIAL, GUARANTEE AND BOX\n"},"estimate_visible":true,"estimate_on_request":false,"is_estimate_unknown":false,"price_on_request":false,"estimate_low":"40000.00","estimate_high":"60000.00","estimate_txt":"CHF 40,000 - CHF 60,000","price_realised":"100,000","price_realised_txt":"CHF 100,000","current_bid":"","current_bid_txt":"","is_saved":false,"show_save":true,"registration_close_date":"","AlternativeLotId":"20043.12"},{"object_id":"6338431","lot_id_txt":"13","event_type":"Sale","start_date":"2021-11-08T14:30Z","end_date":"2021-11-08T00:00Z","time_zone":"CET","is_in_progress":false,"is_auction_over":true,"url":"https://www.christies.com/lotfinder/lot/rolex-an-attractive-18k-gold-automatic-chronograph-6338431-details.aspx?from=salesummary&intObjectID=6338431&lid=1","title_primary_txt":"ROLEX. AN ATTRACTIVE 18K GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, GUARANTEE AND BOX\n","title_secondary_txt":"SIGNED ROLEX, DAYTONA MODEL, REF. 116508, CIRCA 2017\n","title_tertiary_txt":"","consigner_information":"<b>ROLEX</b><br>DAYTONA, REF. 116508<br><br>THE PROPERTY OF A PRIVATE COLLECTOR","description_txt":"ROLEX. AN ATTRACTIVE 18K GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, GUARANTEE AND BOX, SIGNED ROLEX, DAYTONA MODEL, REF. 116508, CIRCA 2017, Movement: Automatic , Dial: Green , Case: 40 mm. diam., With: 18k Rolex Oyster bracelet and deployant clasp stamped L7S, overall length approximately 195 mm., International Guarantee, leather card holder, product literature, pouch, sales tag, presentation box and outer packaging","image":{"image_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0013_000(rolex_an_attractive_18k_gold_automatic_chronograph_wristwatch_with_bra125216).jpg?mode=max","image_mobile_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0013_000(rolex_an_attractive_18k_gold_automatic_chronograph_wristwatch_with_bra125216).jpg?mode=max","image_tablet_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0013_000(rolex_an_attractive_18k_gold_automatic_chronograph_wristwatch_with_bra125216).jpg?mode=max","image_desktop_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0013_000(rolex_an_attractive_18k_gold_automatic_chronograph_wristwatch_with_bra125216).jpg?mode=max","image_alt_text":"ROLEX. AN ATTRACTIVE 18K GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, GUARANTEE AND BOX\n"},"estimate_visible":true,"estimate_on_request":false,"is_estimate_unknown":false,"price_on_request":false,"estimate_low":"40000.00","estimate_high":"60000.00","estimate_txt":"CHF 40,000 - CHF 60,000","price_realised":"100,000","price_realised_txt":"CHF 100,000","current_bid":"","current_bid_txt":"","is_saved":false,"show_save":true,"registration_close_date":"","AlternativeLotId":"20043.13"},{"object_id":"6338432","lot_id_txt":"14","event_type":"Sale","start_date":"2021-11-08T14:30Z","end_date":"2021-11-08T00:00Z","time_zone":"CET","is_in_progress":false,"is_auction_over":true,"url":"https://www.christies.com/lotfinder/lot/rolex-an-extremely-rare-and-very-important-6338432-details.aspx?from=salesummary&intObjectID=6338432&lid=1","title_primary_txt":"ROLEX. AN EXTREMELY RARE AND VERY IMPORTANT 18K GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, BLACK DIAL WITH INVERTED 6, EARLY SERIAL NUMBER\n","title_secondary_txt":"SIGNED ROLEX, DAYTONA, REF. 116528, CASE NO. A966485, CIRCA 1999\n","title_tertiary_txt":"","consigner_information":"<b>ROLEX</b><br>REF. 116528 'A SERIAL, INVERTED SIX'","description_txt":"ROLEX. AN EXTREMELY RARE AND VERY IMPORTANT 18K GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, BLACK DIAL WITH INVERTED 6, EARLY SERIAL NUMBER, SIGNED ROLEX, DAYTONA, REF. 116528, CASE NO. A966485, CIRCA 1999, Movemement: Automatic, Cal. 4130 , Dial: Black, (inverted 6), Case: 40 mm. diam. , With: 18K gold Rolex Oyster bracelet with deployant clasp, overall length approx. 180mm. , Remark: Inverted six, extremely early serial number","image":{"image_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0014_000(rolex_an_extremely_rare_and_very_important_18k_gold_automatic_chronogr125247).jpg?mode=max","image_mobile_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0014_000(rolex_an_extremely_rare_and_very_important_18k_gold_automatic_chronogr125247).jpg?mode=max","image_tablet_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0014_000(rolex_an_extremely_rare_and_very_important_18k_gold_automatic_chronogr125247).jpg?mode=max","image_desktop_src":"https://www.christies.com/img/LotImages/2021/GNV/2021_GNV_20043_0014_000(rolex_an_extremely_rare_and_very_important_18k_gold_automatic_chronogr125247).jpg?mode=max","image_alt_text":"ROLEX. AN EXTREMELY RARE AND VERY IMPORTANT 18K GOLD AUTOMATIC CHRONOGRAPH WRISTWATCH WITH BRACELET, BLACK DIAL WITH INVERTED 6, EARLY SERIAL NUMBER\n"},"estimate_visible":true,"estimate_on_request":false,"is_estimate_unknown":false,"price_on_request":false,"estimate_low":"40000.00","estimate_high":"60000.00","estimate_txt":"CHF 40,000 - CHF 60,000","price_realised":"52,500","price_realised_txt":"CHF 52,500","current_bid":"","current_bid_txt":"","is_saved":false,"show_save":true,"registration_close_date":"","AlternativeLotId":"20043.14"}],"save_lot_api_endpoint":{"url":"//www.christies.com","path":"lots_webapi/api/lotslist/SaveLot","method":"POST","parameters":{"object_id":"","apikey":"708878A1-95DB-4DC2-8FBD-1E8A1DCE703C","save":""}}},"labels":{"lot_txt":"Lot","lot_ended_txt":"Lot has ended","current_bid_txt":"Current bid","estimate_txt":"Estimate","estimate_on_request_txt":"Estimate on request","estimate_unknown_txt":"Estimate unknown","price_on_request_txt":" Price on request","price_realised_txt":"Price realised","currency_txt":"CHF","closed_label_txt":"Lot has ended","save_txt":"Save","saved_txt":"Saved","follow_txt":"Follow","followed_txt":"Followed","unfollow_txt":"Unfollow","aria_follow_txt":"Follow {lottitle}","aria_unfollow_txt":"Unfollow {lottitle}","closed_txt":"Closed","closing_txt":"Closing","happening_now_txt":"Happening Now","starting_txt":"Starting","days_txt":"days","hours_txt":"h","minutes_txt":"m","seconds_txt":"s","quick_view_txt":"Quick View"}};
+    </script>
+    <chr-panel-curated-lot-list-carousel data-namespace="carousel_677142815"
+                                         lot-data-namespace="moreFrom" is-auction-page="false" display="list"></chr-panel-curated-lot-list-carousel>
+        <div class="d-flex d-md-none justify-content-end mt-5 pr-3">
+                <chr-button href="https://www.christies.com/en/auction/rare-watches-29191/" type="icon-label">
+        <span class="chr-action">View All</span>
+        <chr-icon icon="chevron" type="square" rotate="180"></chr-icon>
+    </chr-button>
+
+        </div>
+
+            </div>
+        </section>
+    </div>
+
+       
+</div>
+    </main>
+
+
+<script>
+    window.chrComponents = window.chrComponents || {};
+    window.chrComponents.footer = {
+  "data": {
+    "footer": {
+      "language": "en",
+      "main_navigation": [
+        {
+          "title_txt": "Help",
+          "navigation_links": [
+            {
+              "title_txt": "FAQs",
+              "url": "https://www.christies.com/about-us/help",
+              "type": "link",
+              "analytics_id": "footer_faqs"
+            },
+            {
+              "title_txt": "Buying guides ",
+              "url": "https://www.christies.com/buying-services/buying-guide?lid=1&sc_lang=en",
+              "type": "link",
+              "analytics_id": "footer_buyingguides"
+            },
+            {
+              "title_txt": "Selling guides",
+              "url": "https://www.christies.com/selling-services/selling-guide-chinese?lid=1&sc_lang=en",
+              "type": "link",
+              "analytics_id": "footer_sellingguides"
+            },
+            {
+              "title_txt": "Get an estimate",
+              "url": "https://www.christies.com/selling-services/auction-services/auction-estimates/overview/",
+              "type": "link",
+              "analytics_id": "footer_getanestimate"
+            },
+            {
+              "title_txt": "Payments",
+              "url": "https://www.christies.com/buying-services/buying-guide/arrange-for-payment?lid=1&sc_lang=en",
+              "type": "link",
+              "analytics_id": "footer_payments"
+            },
+            {
+              "title_txt": "Shipping",
+              "url": "https://www.christies.com/buying-services/buying-guide/ship/",
+              "type": "link",
+              "analytics_id": "footer_shipping"
+            },
+            {
+              "title_txt": "Storage",
+              "url": "https://www.cfass.com/",
+              "type": "link",
+              "analytics_id": "footer_storage"
+            }
+          ]
+        },
+        {
+          "title_txt": "About us",
+          "navigation_links": [
+            {
+              "title_txt": "About Christie's",
+              "url": "https://www.christies.com/about-us/welcome-to-christies",
+              "type": "link",
+              "analytics_id": "footer_aboutchristies"
+            },
+            {
+              "title_txt": "Locations",
+              "url": "https://www.christies.com/locations.aspx?sc_lang=en&lid=1",
+              "type": "link",
+              "analytics_id": "footer_locations"
+            },
+            {
+              "title_txt": "Press",
+              "url": "https://www.christies.com/about-us/press-archive/?sc_lang=en&lid=1",
+              "type": "link",
+              "analytics_id": "footer_press"
+            },
+            {
+              "title_txt": "Careers",
+              "url": "https://www.christies.com/about-us/careers",
+              "type": "link",
+              "analytics_id": "footer_careers"
+            },
+            {
+              "title_txt": "Corporate Social Responsibility",
+              "url": "https://www.christies.com/about-us/corporate-social-responsibility",
+              "type": "link",
+              "analytics_id": "footer_corporatesocialresponsibility"
+            },
+            {
+              "title_txt": "Culture & Philanthropy",
+              "url": "https://www.christies.com/about-us/culture-and-philanthropy?lid=1&sc_lang=en",
+              "type": "link",
+              "analytics_id": "footer_cultureandphilanthropy"
+            },
+            {
+              "title_txt": "Sustainability",
+              "url": "https://www.christies.com/home/about-us/corporate-social-responsibility/sustainability",
+              "type": "link",
+              "analytics_id": "footer_sustainability"
+            }
+          ]
+        },
+        {
+          "title_txt": "Services",
+          "navigation_links": [
+            {
+              "title_txt": "Bespoke client advisory service",
+              "url": "https://www.christies.com/en/services/client-advisory",
+              "type": "link",
+              "analytics_id": "footer_bespokeclients"
+            },
+            {
+              "title_txt": "Art Finance",
+              "url": "https://www.christies.com/en/services/christies-art-finance",
+              "type": "link",
+              "analytics_id": "footer_artfinance"
+            },
+            {
+              "title_txt": "Trusts, Estates & Appraisals (Americas)",
+              "url": "https://www.christies.com/en/services/trusts-and-estates",
+              "type": "link",
+              "analytics_id": "footer_trustandestatesmanagement"
+            },
+            {
+              "title_txt": "Estates, Appraisals & Valuations (UK & Europe)",
+              "url": "https://www.christies.com/en/services/estates-appraisals-valuations",
+              "type": "link",
+              "analytics_id": "footer_estateappraisalsandvaluations"
+            },
+            {
+              "title_txt": "Heritage & Taxation",
+              "url": "https://www.christies.com/en/services/heritage-and-taxation-advisory-service",
+              "type": "link",
+              "analytics_id": "footer_heritageandtaxationservice"
+            },
+            {
+              "title_txt": "Corporate Collections",
+              "url": "https://www.christies.com/en/services/corporate-collection-services",
+              "type": "link",
+              "analytics_id": "footer_corporatecollections"
+            },
+            {
+              "title_txt": "Museum Services",
+              "url": "https://www.christies.com/en/services/museum-services",
+              "type": "link",
+              "analytics_id": "footer_museumservice"
+            },
+            {
+              "title_txt": "Restitution",
+              "url": "https://www.christies.com/en/services/restitution-services",
+              "type": "link",
+              "analytics_id": "footer_restitution"
+            },
+            {
+              "title_txt": "Strategic partnerships",
+              "url": "https://www.christies.com/about-us/strategic-partnerships",
+              "type": "link",
+              "analytics_id": "footer_strategicpartnerships"
+            }
+          ]
+        }
+      ],
+      "bottom_navigation": [
+        {
+          "navigation_links": [
+            {
+              "title_txt": "Terms and conditions",
+              "url": "https://www.christies.com/about-us/contact/terms-and-conditions-for-website-use",
+              "type": "link",
+              "analytics_id": "footer_termsandconditions"
+            },
+            {
+              "title_txt": "Privacy",
+              "url": "https://www.christies.com/about-us/welcome-to-christies/privacy",
+              "type": "link",
+              "analytics_id": "footer_privacy"
+            },
+            {
+              "title_txt": "Security",
+              "url": "https://www.christies.com/about-us/contact/security/?sc_lang=en&lid=1",
+              "type": "link",
+              "analytics_id": "footer_security"
+            },
+            {
+              "title_txt": "Cookie settings",
+              "url": "",
+              "type": "cookie",
+              "analytics_id": "footer_cookiesettings"
+            },
+            {
+              "title_txt": "Do not sell my personal information",
+              "url": "https://www.christies.com/about-us/contact/ccpa",
+              "type": "link",
+              "analytics_id": "footer_donotsellmypersonalinfo"
+            },
+            {
+              "title_txt": "Modern slavery statement",
+              "url": "https://www.christies.com/media-library/pdf/2020/modern-slavery-statement-2020.pdf",
+              "type": "link",
+              "analytics_id": "footer_modernslaverystatement"
+            }
+          ]
+        },
+        {
+          "navigation_links": [
+            {
+              "title_txt": "Christie's Education",
+              "url": "https://www.christies.edu/?sc_lang=en&lid=1",
+              "type": "link",
+              "analytics_id": "footer_christieseducation"
+            },
+            {
+              "title_txt": "Christie's Real Estate",
+              "url": "https://www.christiesrealestate.com/?sc_lang=en&lid=1",
+              "type": "link",
+              "analytics_id": "footer_christiesrealestate"
+            }
+          ]
+        }
+      ],
+      "social_links": [
+        {
+          "icon": "facebook",
+          "url": "https://www.facebook.com/Christies",
+          "type": "link",
+          "analytics_id": "footer_facebook"
+        },
+        {
+          "icon": "instagram",
+          "url": "https://www.instagram.com/christiesinc",
+          "type": "link",
+          "analytics_id": "footer_instagram"
+        },
+        {
+          "icon": "pinterest",
+          "url": "https://cz.pinterest.com/christiesinc/",
+          "type": "link",
+          "analytics_id": "footer_pinterest"
+        },
+        {
+          "icon": "wechat",
+          "url": "https://www.christies.com/-/media/project/christies-discovery/discovery-website/footer/subscription-account-qrcode.jpg?as=0&dmc=0&iar=0&thn=0&udi=0&rev=4738807303744fd2a0eae4a1b94b1e28",
+          "type": "qr",
+          "modal_title_txt": "Scan me...",
+          "modal_description_txt": "Start using WeChat by scanning the following QR code.",
+          "analytics_id": "footer_wechat"
+        },
+        {
+          "icon": "weibo",
+          "url": "https://weibo.com/christies?ssl_rnd=1610476413.9034",
+          "type": "link",
+          "analytics_id": "footer_weibo"
+        },
+        {
+          "icon": "youtube",
+          "url": "https://www.youtube.com/channel/UCSbY5GF1eSKtT6d32qC7Krw",
+          "type": "link",
+          "analytics_id": "footer_youtube"
+        }
+      ],
+      "copyright_txt": "Christie's 2021"
+    }
+  },
+  "labels": {
+    "aria_footer_navigation_txt": "Site",
+    "aria_footer_secondary_nav_txt": "Site secondary",
+    "aria_social_media_list_txt": "Social media",
+    "footer_license_logo_txt": "ICP license logo"
+  }
+};
+</script>
+
+<div class="chr-header-footer">
+    <chr-footer data-namespace="footer"></chr-footer>
+
+    <chr-modal-provider></chr-modal-provider>
+</div>
+    
+
+
+    <script src="/Assets/Discovery.Project.Website/V2020/design-library/mtiFontTrackingCode.js?hash=32dd789522cc6923c80141fcf5d3a614"></script>
+
+
+
+<script type="text/javascript" src="/Build/scripts/v3/global-bundle.min.js?hash=1444046191" defer></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
+<link href="/css/FastSignup.css?hash=1444046191" rel="stylesheet" type="text/css" />
+<script src="/js/LoadFastSignUp.js?hash=1444046191" defer></script>
+</body>
+</html>
